@@ -2,7 +2,7 @@
 
 # SEIR-Zoidberg
 
-![Zoidberg](https://imgur.com/xYEiSCp)
+![Zoidberg](zoidberg.png)
 
 ## Licensing
 
