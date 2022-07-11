@@ -34,12 +34,13 @@ The [student handbook](../../../../../wiki/Student-Handbook) is always accessibl
 
 #### 6 channels
 
-- #seir-belcher-classroom
-- #seir-belcher-outcomes
-- #seir-belcher-parkinglot
-- #seir-belcher-partytime
-- #seir-belcher-sos
-- #seir-belcher-techtalk
+- #seir-zoidberg-classroom
+- #seir-zoidberg-homework
+- #seir-zoidberg-outcomes
+- #seir-zoidberg-parkinglot
+- #seir-zoidberg-partytime
+- #seir-zoidberg-sos
+- #seir-zoidberg-techtalk
 
 #### How To:
 
