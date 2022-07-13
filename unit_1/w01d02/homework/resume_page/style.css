@@ -29,14 +29,17 @@ h1 {
 	text-align: center;
 }
 
+nav {
+	width: 90%;
+}
 nav ul {
-	width: 97%;
+	width: 90%;
 	display: flex;
 	justify-content: space-around;
 	list-style-type: none;
 }
 
-li {
+.navnav li {
 	background-color: blueviolet;
 	font-size: 40px;
 
@@ -44,19 +47,32 @@ li {
 	border-radius: 20px;
 	padding: 25px;
 }
-li a {
+.navnav li a {
 	text-decoration: none;
 	color: aliceblue;
 }
 
-li:hover {
+.navnav li:hover {
 	color: blueviolet;
 	background-color: aliceblue;
 }
-a:hover {
+.navnav li a:hover {
 	color: blueviolet;
 }
 
+div {
+	background-color: rgba(22, 46, 181, 0.2);
+	border-radius: 30px;
+}
 .past ul {
-	text-decoration: none;
+	list-style-type: none;
+}
+
+.job {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.job p {
+	font-size: 20px;
 }
