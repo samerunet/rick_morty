@@ -53,5 +53,3 @@ const squares = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
 
 // pairs[0][1] = "Maude";
 // console.log(pairs[0][1]);
-
-
