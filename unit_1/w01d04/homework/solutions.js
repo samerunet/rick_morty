@@ -42,18 +42,38 @@
 //     for (let i = 0; i < numbers.length; i++) {
 //         sum += numbers[i];
 //         console.log(i)
-//     }  
+//     }
 //     return sum
 // }
 
 //  console.log(sumArray([1, 2, 3, 4, 5, 6]))
 
-
-
 // console.log(sum);
-// use loop
 
 //prime numbers
+
+const primeNumber = 13;
+
+const checkPrime = (num) => {
+	for (let i = 2; i < num; i++) {
+		if (num % i === 0) return false;
+	}
+    return num > 1;
+};
+
+console.log(checkPrime(primeNumber));
+
+const printPrime = (num) => {
+	let a = [];
+	for (let i = 2; i <= num; i ++) {
+		if (checkPrime(i)) {
+			a.push(i);
+		}
+	}
+	console.log(a);
+};
+
+printPrime(primeNumber);
 
 // a number that evenly divides by a number and itself
 
