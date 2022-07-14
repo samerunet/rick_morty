@@ -16,7 +16,7 @@
 
 ////////////////////////////////
 // Fizz Buzz
-////////////////////////////////
+//////////////////////////////
 // for (let i = 1; i <= 100; i++) {
 // 	if (i % 3 == 0 && i % 5 == 0) {
 // 		console.log("FizzBuzz");
@@ -48,7 +48,7 @@
 ////////////////////////////////
 // const ninja = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
 
-// for (const element in ninja) {
+// for (const element of ninja) {
 // 	console.log(element.toUpperCase());
 // }
 
@@ -146,17 +146,17 @@
 //  Find the Median
 ////////////////////////////////
 
-const nums = [
-	14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
-	17, 12, 71, 18, 15, 12,
-];
+// const nums = [
+// 	14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+// 	17, 12, 71, 18, 15, 12,
+// ];
 
-nums.sort((a, b) => {
-	return a - b;
-}); //  sort array by increment number
-const half = Math.floor(nums.length / 2); // index number of median
-const median = nums[half]; // median number
-console.log(median); // logs 15 as expected
+// nums.sort((a, b) => {
+// 	return a - b;
+// }); //  sort array by increment number
+// const half = Math.floor(nums.length / 2); // index number of median
+// const median = nums[half]; // median number
+// console.log(median); // logs 15 as expected
 
 ////////////////////////////////////////////////////////////////
 
