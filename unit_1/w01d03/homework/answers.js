@@ -127,27 +127,43 @@
 // ////////////////////////////////
 
 
-for (let i = 0; i < 20; i++) {
-	console.log("Love me, pet me! HSSSSSS!")
-}
+// for (let i = 0; i < 20; i++) {
+// 	console.log("Love me, pet me! HSSSSSS!")
+// }
 
 
 
-let kittenTalk = [
-	"...human...why you taking pictures of me?...",
-	"...the catnip made me do it...",
-	"...why does the red dot always get away...",
-];
-for (let i = 1; i <= 20; i++) {
-	if (i % 2 == 0) {
-		console.log(kittenTalk[Math.floor(Math.random()* 3)])
+// let kittenTalk = [
+// 	"...human...why you taking pictures of me?...",
+// 	"...the catnip made me do it...",
+// 	"...why does the red dot always get away...",
+// ];
+// for (let i = 1; i <= 20; i++) {
+// 	if (i % 2 == 0) {
+// 		console.log(kittenTalk[Math.floor(Math.random()* 3)])
 
-	}
-}
+// 	}
+// }
 
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+
+nums.sort( (a , b)=> {
+	return a - b;
+})  	//  sort array by increment number
+const half = Math.floor(nums.length / 2) // index number of median 
+const median = nums[half]   // median number
+console.log(median) // logs 15 as expected 
+
+
+
+
+
+////////////////////////////////////////////////////////////////
 
 // const newArray = [
 // 	1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
