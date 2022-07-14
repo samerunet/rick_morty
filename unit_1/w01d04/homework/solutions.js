@@ -6,8 +6,21 @@
 
 // palindrome 
 
+const checkPalindrome (word) => {
+    
+        word = (word.toUpperCase())
+
+    let  wordReverse = word.split("").reverse().join("")
+    
+    console.log(wordReverse)
+} 
+
+
+
+
 
 // sum array 
+
 // use loop 
 
 
