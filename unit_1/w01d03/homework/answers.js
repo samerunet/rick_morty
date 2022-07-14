@@ -79,28 +79,30 @@ const favMovies = [
 
 console.log(favMovies.indexOf("Titanic"));
 
-// favMovies.sort(); // alphabetically sorted
+favMovies.sort(); // alphabetically sorted
 
-// favMovies.pop();
+favMovies.pop();
 
-// favMovies.push("Guardians of the Galaxy");
+favMovies.push("Guardians of the Galaxy");
 
-// favMovies.reverse();
+favMovies.reverse();
 
-// favMovies.shift();
+favMovies.shift();
 
-// favMovies.unshift("Guardians of the Galaxy");
+favMovies.unshift("Guardians of the Galaxy");
 
-// console.log(favMovies.indexOf("Django Unchained"));
-// // adds array element to index 0
+console.log(favMovies.indexOf("Django Unchained"));
+// adds array element to index 0
 
-// favMovies.splice(15, 1, "Avatar");
+favMovies.splice(15, 1, "Avatar");
 
-// const half = favMovies.slice(Math.floor(favMovies.length / 2)); 
+const half = favMovies.slice(Math.floor(favMovies.length / 2)); 
 
-// // doesn't change original arr
+// doesn't change original arr
 
-// console.log(half);
+console.log(half);
+
+console.log(favMovies)
 
 
 //////////////////////////////
