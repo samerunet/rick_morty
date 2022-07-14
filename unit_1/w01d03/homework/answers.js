@@ -55,59 +55,73 @@
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
-const favMovies = [
-	"Jaws",
-	"The Fellowship of the Ring",
-	"Howl's Moving Castle",
-	"Django Unchained",
-	"Cloud Atlas",
-	"The Usual Suspects",
-	"Toy Story",
-	"Conan the Barbarian",
-	"Titanic",
-	"Harry Potter",
-	"Fried Green Tomatoes",
-	"Volver",
-	"Oculus",
-	"Seven",
-	"Black Panther",
-	"Harry Potter",
-	"Imitation of Life",
-	"Snatch",
-	"Fast and Furious",
-];
+// const favMovies = [
+// 	"Jaws",
+// 	"The Fellowship of the Ring",
+// 	"Howl's Moving Castle",
+// 	"Django Unchained",
+// 	"Cloud Atlas",
+// 	"The Usual Suspects",
+// 	"Toy Story",
+// 	"Conan the Barbarian",
+// 	"Titanic",
+// 	"Harry Potter",
+// 	"Fried Green Tomatoes",
+// 	"Volver",
+// 	"Oculus",
+// 	"Seven",
+// 	"Black Panther",
+// 	"Harry Potter",
+// 	"Imitation of Life",
+// 	"Snatch",
+// 	"Fast and Furious",
+// ];
 
-console.log(favMovies.indexOf("Titanic"));
+// console.log(favMovies.indexOf("Titanic"));
 
-favMovies.sort(); // alphabetically sorted
+// favMovies.sort(); // alphabetically sorted
 
-favMovies.pop();
+// favMovies.pop();
 
-favMovies.push("Guardians of the Galaxy");
+// favMovies.push("Guardians of the Galaxy");
 
-favMovies.reverse();
+// favMovies.reverse();
 
-favMovies.shift();
+// favMovies.shift();
 
-favMovies.unshift("Guardians of the Galaxy");
+// favMovies.unshift("Guardians of the Galaxy");
 
-console.log(favMovies.indexOf("Django Unchained"));
-// adds array element to index 0
+// console.log(favMovies.indexOf("Django Unchained"));
+// // adds array element to index 0
 
-favMovies.splice(15, 1, "Avatar");
+// favMovies.splice(15, 1, "Avatar");
 
-const half = favMovies.slice(Math.floor(favMovies.length / 2)); 
+// const half = favMovies.slice(Math.floor(favMovies.length / 2));
 
-// doesn't change original arr
+// // doesn't change original arr
 
-console.log(half);
+// console.log(half);
 
-console.log(favMovies)
-
+// console.log(favMovies)
 
 //////////////////////////////
 // Where is Waldo//
 ////////////////////////////////
+const whereIsWaldo = [
+	["Timmy", "Frank"],
+	"Eggbert",
+	["Lucinda", "Jacc", "Neff", "Snoop"],
+	["Petunia", ["Baked Goods", "Waldo"]],
+];
+
+whereIsWaldo.splice(1, 1);
+
+console.log(whereIsWaldo);
+
+whereIsWaldo[1][2] = "No One"
+
+console.log(whereIsWaldo[2][1][1])
+
 
 ////////////////////////////////
 //  Excited Kitten
