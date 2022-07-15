@@ -11,12 +11,12 @@
 
 // palindrome
 
-// creat function
-// asign parameter
+// create function
+// assign parameter
 // uppercase parameter
 // split parameter
 // reverse parameter
-// compare within if statement if every letter of the word mutches
+// compare within if statement if every letter of the word matches
 // return true or false
 // console.log result
 
@@ -52,13 +52,13 @@
 
 //prime numbers
 
-// const primeNumber = 13;
+// const primeNumber = 0;
 
 // const checkPrime = (num) => {
 // 	for (let i = 2; i < num; i++) {
 // 		if (num % i === 0) return false;
 // 	}
-//     return num > 1;
+// 	return num > 1;
 // };
 
 // console.log(checkPrime(primeNumber));
@@ -76,36 +76,36 @@
 // };
 
 // rock paper scissors
-let move = ["Rock", "Paper", "Scissors"];
-const randomMove = () => {
-	let random = Math.floor(Math.random() * move.length);
-	return random;
-};
+// let move = ["Rock", "Paper", "Scissors"];
+// const randomMove = () => {
+// 	let random = Math.floor(Math.random() * move.length);
+// 	return random;
+// };
 
-let computersMove = randomMove();
-let usersMove = randomMove();
-console.log(`Computer picked ${move[computersMove]}`);
-console.log(`User picked ${move[usersMove]}`);
+// let computersMove = randomMove();
+// let usersMove = randomMove();
+// console.log(`Computer picked ${move[computersMove]}`);
+// console.log(`User picked ${move[usersMove]}`);
 
-const rockPaperScissors = () => {
-	if (computersMove === usersMove) {
-		return "It's a tie";
-	} else if (computersMove === 0 && usersMove === 1) {
-		return "User wins";
-	} else if (computersMove === 0 && usersMove === 2) {
-		return "Computer wins";
-	} else if (computersMove === 1 && usersMove === 2) {
-		return "User wins";
-	} else if (computersMove === 2 && usersMove === 0) {
-		return "User wins";
-	} else if (computersMove === 1 && usersMove === 0) {
-		return "Computer wins";
-	} else if (computersMove === 2 && usersMove === 1) {
-		return "Computer wins";
-	}
-};
+// const rockPaperScissors = () => {
+// 	if (computersMove === usersMove) {
+// 		return "It's a tie";
+// 	} else if (computersMove === 0 && usersMove === 1) {
+// 		return "User wins";
+// 	} else if (computersMove === 0 && usersMove === 2) {
+// 		return "Computer wins";
+// 	} else if (computersMove === 1 && usersMove === 2) {
+// 		return "User wins";
+// 	} else if (computersMove === 2 && usersMove === 0) {
+// 		return "User wins";
+// 	} else if (computersMove === 1 && usersMove === 0) {
+// 		return "Computer wins";
+// 	} else if (computersMove === 2 && usersMove === 1) {
+// 		return "Computer wins";
+// 	}
+// };
 
-console.log(rockPaperScissors());
+// console.log(rockPaperScissors());
 // => computer chose rock
 // => user chose paper
 // => paper beats rock, user wins!
