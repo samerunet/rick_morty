@@ -52,33 +52,60 @@
 
 //prime numbers
 
-const primeNumber = 13;
+// const primeNumber = 13;
 
-const checkPrime = (num) => {
-	for (let i = 2; i < num; i++) {
-		if (num % i === 0) return false;
-	}
-    return num > 1;
-};
+// const checkPrime = (num) => {
+// 	for (let i = 2; i < num; i++) {
+// 		if (num % i === 0) return false;
+// 	}
+//     return num > 1;
+// };
 
-console.log(checkPrime(primeNumber));
+// console.log(checkPrime(primeNumber));
 
-const printPrime = (num) => {
-	let a = [];
-	for (let i = 2; i <= num; i ++) {
-		if (checkPrime(i)) {
-			a.push(i);
-		}
-	}
-	console.log(a);
-};
+// printPrime(primeNumber);
 
-printPrime(primeNumber);
-
-// a number that evenly divides by a number and itself
+// const printPrime = (num) => {
+// 	let a = [];
+// 	for (let i = 2; i <= num; i ++) {
+// 		if (checkPrime(i)) {
+// 			a.push(i);
+// 		}
+// 	}
+// 	console.log(a);
+// };
 
 // rock paper scissors
+let move = ["Rock", "Paper", "Scissors"];
+const randomMove = () => {
+	let random = Math.floor(Math.random() * move.length);
+	return random;
+};
 
-// 2 funsctions cp move , user move
+let computersMove = randomMove();
+let usersMove = randomMove();
+console.log(`Computer picked ${move[computersMove]}`);
+console.log(`User picked ${move[usersMove]}`);
 
-// create if statement to check who won
+const rockPaperScissors = () => {
+	if (computersMove === usersMove) {
+		return "It's a tie";
+	} else if (computersMove === 0 && usersMove === 1) {
+		return "User wins";
+	} else if (computersMove === 0 && usersMove === 2) {
+		return "Computer wins";
+	} else if (computersMove === 1 && usersMove === 2) {
+		return "User wins";
+	} else if (computersMove === 2 && usersMove === 0) {
+		return "User wins";
+	} else if (computersMove === 1 && usersMove === 0) {
+		return "Computer wins";
+	} else if (computersMove === 2 && usersMove === 1) {
+		return "Computer wins";
+	}
+};
+
+console.log(rockPaperScissors());
+// => computer chose rock
+// => user chose paper
+// => paper beats rock, user wins!
