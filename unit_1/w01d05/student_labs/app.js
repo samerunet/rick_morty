@@ -2,6 +2,54 @@ const prompt = require("prompt-sync")();
 console.log("    ");
 const username = prompt("What is your name? ");
 
+const wait = () => {
+	console.log("    ");
+	console.log("Have a nice day!");
+	console.log("    ");
+	console.log(` ${username} Wait where are you going?`);
+	console.log("    ");
+	console.log("I will miss you");
+	console.log("    ");
+
+	let secondChance = prompt(`${username} Was the game boring for you ?`);
+
+	secondChance = secondChance.toUpperCase();
+
+	if (secondChance == "YES") {
+		let secondChanceAnswer = prompt(
+			"I am so sorry to hear that, do you want to give me second chance?"
+		);
+
+		secondChanceAnswer = secondChanceAnswer.toUpperCase();
+
+		if (secondChanceAnswer == "YES") {
+			return newGame();
+		}
+	} else {
+		let secondChanceAnswer = prompt(
+			"Were you happy with the first game you played?     "
+		);
+		console.log("    ");
+		secondChanceAnswer = secondChanceAnswer.toUpperCase();
+
+		if (secondChanceAnswer == "YES") {
+			let rating = prompt(" Will you rate this game 1 - 5 ? ");
+			console.log("    ");
+			if (rating >= 4) {
+				const Rank = Math.floor(Math.random() * 1000);
+				console.log(`
+                Your Rank is ${Rank} out of 1000 people played and thank you for your feedback`);
+				console.log("    ");
+			} else if (rating <= 3) {
+				console.log("I appreciate your honesty");
+				console.log("    ");
+			} else {
+				console.log("Okay then have a nice day.");
+				console.log("    ");
+			}
+		}
+	}
+};
 // console.log(`Your name is ${username}`);
 
 console.log("    ");
@@ -76,23 +124,10 @@ const newGame = () => {
 		if (playAgain == "YES") {
 			return newGame();
 		} else {
-			return;
-			console.log("    ");
-			console.log("Have a nice day!");
+			return wait();
 		}
 	};
 	repeat();
 };
 
 newGame();
-
-// => computer chose rock
-// => user chose paper
-// => paper beats rock, user wins!
-
-// clg welcome to game
-// please pick
-// give  options rock
-//paper scissors
-// from existing code change the input value  of usersMove
-// print the outcome
