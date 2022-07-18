@@ -2,7 +2,7 @@
 
 ## Lesson Link
 
-[Object-ception](https://www.youtube.com/watch?v=OvGU-pSAhgs&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=4)
+[Object-ception](https://generalassembly.wistia.com/medias/yzuollo0is)
 
 ## Lesson objectives
 
