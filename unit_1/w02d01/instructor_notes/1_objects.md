@@ -2,7 +2,7 @@
 
 ## Video Link
 
-[Objects](https://www.youtube.com/watch?v=HbO7rQzynGY&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=3)
+[Objects](https://generalassembly.wistia.com/medias/w30w9pgbgy)
 
 ## Lesson Objectives
 
