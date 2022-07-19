@@ -82,11 +82,9 @@ player = player.toLowerCase();
 console.log(player);
 
 if (player === "soultaker") {
-	return console.log(`Your choice of hero Soultaker`),
-		// game(hero, goblin);
-} else  {
-	return console.log(`Your choice of hero Destroyer`),
-		// game(goblin, hero);
+	return console.log(`Your choice of hero Soultaker`), game(hero, goblin);
+} else {
+	return console.log(`Your choice of hero Destroyer`), game(goblin, hero);
 }
 
 const game = (player, enemy) => {
