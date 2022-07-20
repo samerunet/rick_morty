@@ -1,55 +1,3 @@
-// nested object of alienShips
-// const alienShips = {
-// 	alienShip1: [
-// 		{
-// 			name: "Alien1",
-// 			hull: 3,
-// 			firepower: 2,
-// 			accuracy: 0.6,
-// 		},
-// 	],
-// 	alienShip2: [
-// 		{
-// 			name: "Alien2",
-// 			hull: 3,
-// 			firepower: 4,
-// 			accuracy: 0.7,
-// 		},
-// 	],
-// 	alienShip3: [
-// 		{
-// 			name: "Alien3",
-// 			hull: 5,
-// 			firepower: 3,
-// 			accuracy: 0.8,
-// 		},
-// 	],
-// 	alienShip4: [
-// 		{
-// 			name: "Alien4",
-// 			hull: 4,
-// 			firepower: 3,
-// 			accuracy: 0.7,
-// 		},
-// 	],
-// 	alienShip5: [
-// 		{
-// 			name: "Alien5",
-// 			hull: 5,
-// 			firepower: 3.5,
-// 			accuracy: 0.7,
-// 		},
-// 	],
-// 	alienShip6: [
-// 		{
-// 			name: "Alien6",
-// 			hull: 6,
-// 			firepower: 4,
-// 			accuracy: 0.8,
-// 		},
-// 	],
-// };
-
 const prompt = require("prompt-sync")();
 
 const generalGame = () => {
@@ -123,6 +71,9 @@ const generalGame = () => {
 			return alien[Math.floor(Math.random() * alien.length)];
 		};
 
+
+
+        
 		let enemy = enemyRandom();
 
 		const enemyAttack = () => {
@@ -136,9 +87,11 @@ const generalGame = () => {
 
 			if (battleShipDecission === "ATTACK") {
 				repeatGame();
-			} else {
+			} else if (battleShipDecission === "HEAL") {
 				battleShip.hull = battleShip.hull + 2;
 				repeatGame();
+			} else {
+				battleShipDecission = prompt("Sorry, i didn't understand your input");
 			}
 		};
 

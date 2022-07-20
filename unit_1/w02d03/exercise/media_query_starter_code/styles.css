@@ -1,3 +1,14 @@
 body {
 	background: #eeeeee;
 }
+
+@media (min-width: 500x) {
+	body {
+		background-color: purple;
+	}
+}
+
+div {
+	border: 3px solid black;
+	display: flex;
+}
