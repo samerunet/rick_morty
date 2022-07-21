@@ -12,6 +12,12 @@ const prompt = require("prompt-sync")();
 
 // restart game available
 
+// added option that user will spend money every day on random restaurant
+
+// added options to purchase different tools
+
+//
+
 const initializeGame = () => {
 	const username = prompt("What is your name? ");
 	console.log("");
