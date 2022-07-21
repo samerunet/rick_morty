@@ -1,5 +1,4 @@
 const prompt = require("prompt-sync")();
-const username = prompt("What is your name? ");
 
 /* 
  Create functions for all tools 
@@ -9,10 +8,16 @@ const username = prompt("What is your name? ");
  A user can have a limit of 2 tools at given time 
 */
 
+// if you want the player to win and you have limited time please update user.wallet value
+
+// restart game available
+
 const initializeGame = () => {
+	const username = prompt("What is your name? ");
+	console.log("");
 	const user = {
 		username: "",
-		wallet: 4,
+		wallet: 10,
 		daysPlayed: 0,
 		tools: 0,
 	};
@@ -40,42 +45,58 @@ const initializeGame = () => {
 			name: "Hiring Team of Starving Students",
 			price: 500,
 			earn: 250,
-			owned: 0,
+			owned: 1,
 		},
 	];
 
 	const purchaseScissors = () => {
-		user.wallet -= tool[1].price;
-		tool[1].owned = 1;
-		console.log(
-			` Congratulations you have successfully purchased ${tool[1].name}`
-		);
+		if (tool[1].owned === 1) {
+			console.log("You already have this tool");
+		} else {
+			user.wallet -= tool[1].price;
+			tool[1].owned = 1;
+			console.log(
+				` Congratulations you have successfully purchased ${tool[1].name}`
+			);
+		}
 	};
 
 	const purchaseLawnmower = () => {
-		user.wallet -= tool[2].price;
-		tool[2].owned = 1;
-		console.log(
-			` Congratulations you have successfully purchased ${tool[2].name}`
-		);
+		if (tool[2].owned === 1) {
+			console.log("You already have this tool");
+		} else {
+			user.wallet -= tool[2].price;
+			tool[2].owned = 1;
+			console.log(
+				` Congratulations you have successfully purchased ${tool[2].name}`
+			);
+		}
 	};
 
 	const purchasePoweredLawnmower = () => {
-		user.wallet -= tool[3].price;
-		tool[3].owned = 1;
-		console.log(
-			` Congratulations you have successfully purchased ${tool[3].name}`
-		);
+		if (tool[3].owned === 1) {
+			console.log("You already have this tool");
+		} else {
+			user.wallet -= tool[3].price;
+			tool[3].owned = 1;
+			console.log(
+				` Congratulations you have successfully purchased ${tool[3].name}`
+			);
+		}
 	};
 
 	const hireStudents = () => {
-		user.wallet -= tool[4].price;
-		tool[4].owned = 1;
-		console.log(` Congratulations you have successfully  ${tool[4].name}`);
+		if (tool[4].owned === 1) {
+			console.log("You already have this tool");
+		} else {
+			user.wallet -= tool[4].price;
+			tool[4].owned = 1;
+			console.log(` Congratulations you have successfully  ${tool[4].name}`);
+		}
 	};
 
 	const purchaseTool = () => {
-		console.log("PurchaseTool");
+		console.log(" ");
 		let purchaseChoice = prompt(
 			`Would you like to purchase  Scissors, Lawnmower, Powered Lawnmower, or hire Students?`
 		);
@@ -96,8 +117,24 @@ const initializeGame = () => {
 	};
 
 	const checkWallet = () => {
-		// // }
-		if (user.wallet < 0) {
+		if (user.wallet >= 1000 && tool[4].owned === 1) {
+			console.log(
+				"********************************************************************************************************************************"
+			);
+			console.log(
+				`Congratulations you have completed all the required tasks to win this game!`
+			);
+			console.log(
+				"********************************************************************************************************************************"
+			);
+			let userSecondChance = prompt(`Do you want to start the game again?`);
+			userSecondChance = userSecondChance.toUpperCase();
+			if (userSecondChance === "YES") {
+				initializeGame();
+			} else {
+				console.log("have a nice day!");
+			}
+		} else if (user.wallet < 0) {
 			console.log("You are dead from starving");
 			console.log("");
 			console.log("");
@@ -106,19 +143,21 @@ const initializeGame = () => {
 			let userSecondChance = prompt(
 				`After being homeless for 5 years you have collected enough plastic to start your landscaper business again, would you like to try again ?`
 			);
+			userSecondChance = userSecondChance.toUpperCase();
 			if (userSecondChance === "YES") {
 				initializeGame();
 			}
-			if (user.wallet >= 5) {
-				let toolPurchase = prompt(`Would you like to purchase another tool`);
-				toolPurchase = toolPurchase.toUpperCase();
+		} else if (user.wallet >= 5) {
+			let toolPurchase = prompt(`Would you like to purchase another tool?   `);
+			console.log("");
+			toolPurchase = toolPurchase.toUpperCase();
 
-				if (toolPurchase === "YES") {
-					purchaseTool();
-				} else {
-					dailyChoice();
-				}
+			if (toolPurchase === "YES") {
+				purchaseTool();
+			} else {
+				dailyChoice();
 			}
+		} else {
 			dailyChoice();
 		}
 	};
@@ -127,7 +166,9 @@ const initializeGame = () => {
 			"Do you want to go sleep and work tomorrow or do you want to quit?"
 		);
 		dailyChoice = dailyChoice.toUpperCase();
+
 		if (dailyChoice === "SLEEP" || dailyChoice === "YES") {
+			console.log("");
 			console.log(`We hope you have a good night of rest`);
 			console.log("");
 
@@ -165,6 +206,7 @@ const initializeGame = () => {
 
 		console.log("");
 		let userPicked = prompt(`Do you want to start?`);
+		console.log("");
 		userPicked = userPicked.toUpperCase();
 		if (userPicked === "YES") {
 			user.daysPlayed += 1;
