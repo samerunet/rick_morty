@@ -39,6 +39,7 @@ body {
 .fruit {
   background: var(--soft-pink);
 }
+
 div {
   min-height: 100px;
   background: white;
