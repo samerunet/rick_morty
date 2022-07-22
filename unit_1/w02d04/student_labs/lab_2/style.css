@@ -1,0 +1,33 @@
+.top {
+	height: 200px;
+	width: 600px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	background-color: lightyellow;
+}
+
+.red {
+	background-color: red;
+	height: 200px;
+	width: 200px;
+}
+
+.white {
+	background-color: rgb(238, 209, 19);
+	height: 200px;
+	width: 200px;
+}
+
+.blue {
+	background-color: blue;
+	height: 200px;
+	width: 200px;
+}
+
+.bottom {
+	height: 500px;
+	width: 500px;
+	margin-top: 800px;
+}
