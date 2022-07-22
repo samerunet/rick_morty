@@ -9,3 +9,15 @@ body {
 	text-transform: uppercase;
 	text-shadow: 7px 4px #111106;
 }
+
+.name,
+.house,
+.pet,
+.wand {
+	color: bisque;
+	text-transform: uppercase;
+	text-shadow: 2px 4px #111106;
+	border: 2px solid white;
+	width: 200px;
+	text-align: center;
+}
