@@ -23,11 +23,11 @@ const initializeGame = () => {
 	console.log("");
 	const user = {
 		username: "",
-		wallet: 10,
+		wallet: 5,
 		daysPlayed: 0,
 		tools: 0,
 	};
-
+	// user.wallet = user.wallet.toFixed(2);
 	const restaurant = [
 		{ name: "KFC", amount: 0.5 },
 		{ name: "Taco Bell", amount: 0.8 },
@@ -51,7 +51,7 @@ const initializeGame = () => {
 			name: "Hiring Team of Starving Students",
 			price: 500,
 			earn: 250,
-			owned: 1,
+			owned: 0,
 		},
 	];
 
@@ -59,10 +59,10 @@ const initializeGame = () => {
 		if (tool[1].owned === 1) {
 			console.log("You already have this tool");
 		} else {
-			user.wallet -= tool[1].price;
+			user.wallet = (user.wallet - tool[1].price).toFixed(2);
 			tool[1].owned = 1;
 			console.log(
-				` Congratulations you have successfully purchased ${tool[1].name}`
+				` Congratulations you have successfully purchased ${tool[1].name} your wallet now has ${user.wallet}`
 			);
 		}
 	};
@@ -71,10 +71,10 @@ const initializeGame = () => {
 		if (tool[2].owned === 1) {
 			console.log("You already have this tool");
 		} else {
-			user.wallet -= tool[2].price;
+			user.wallet = (user.wallet - tool[2].price).toFixed(2);
 			tool[2].owned = 1;
 			console.log(
-				` Congratulations you have successfully purchased ${tool[2].name}`
+				` Congratulations you have successfully purchased ${tool[2].name} your wallet now has ${user.wallet}`
 			);
 		}
 	};
@@ -86,7 +86,7 @@ const initializeGame = () => {
 			user.wallet -= tool[3].price;
 			tool[3].owned = 1;
 			console.log(
-				` Congratulations you have successfully purchased ${tool[3].name}`
+				` Congratulations you have successfully purchased ${tool[3].name} your wallet now has ${user.wallet}`
 			);
 		}
 	};
@@ -97,7 +97,9 @@ const initializeGame = () => {
 		} else {
 			user.wallet -= tool[4].price;
 			tool[4].owned = 1;
-			console.log(` Congratulations you have successfully  ${tool[4].name}`);
+			console.log(
+				` Congratulations you have successfully  ${tool[4].name} your wallet now has ${user.wallet}`
+			);
 		}
 	};
 
@@ -182,7 +184,7 @@ const initializeGame = () => {
 
 			console.log(dinner);
 
-			user.wallet = (user.wallet - dinner.amount).toFixed(1);
+			user.wallet = user.wallet - dinner.amount;
 			console.log(
 				`You were hungry and had to spend ${dinner.amount} at ${dinner.name} and your wallet has $${user.wallet}`
 			);
@@ -225,4 +227,8 @@ const initializeGame = () => {
 	landscaper();
 };
 
-initializeGame();
+// initializeGame();
+
+(function sayHi() {
+	console.log("papa");
+})();
