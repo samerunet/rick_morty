@@ -21,3 +21,11 @@ body {
 	width: 200px;
 	text-align: center;
 }
+
+.secret {
+	opacity: 0.5;
+}
+
+.storage {
+	list-style-type: none;
+}
