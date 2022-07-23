@@ -46,8 +46,8 @@ $(() => {
 		let $article = $("<article>").attr("id", lands[i]);
 		console.log($article);
 		let $articleH1 = $("<h1>").text(lands[i]);
-    $article.append($articleH1);
-    $middleEarth.append($article)
+		$article.append($articleH1);
+		$middleEarth.append($article);
 	}
 	//   3a. creates an article tag (there should be one for each land when the loop is done)
 
@@ -67,6 +67,15 @@ $(() => {
 	// Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
 	// 1. create a 'ul'
+
+	const $ul = $("<ul>");
+
+	for (let i = 0; i < hobbits.length; i++) {
+		const $li = $("<li>").addClass("hobbits").text(hobbits[i]);
+		$ul.append($li);
+	}
+
+	$("#The-Shire").append($ul);
 
 	// 2. make each hobbit an li element and append it to the 'ul' you just created
 	// hint: use the given 'hobbits' array and use a for loop
