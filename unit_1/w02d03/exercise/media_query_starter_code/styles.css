@@ -2,6 +2,7 @@ body {
 	background: #eeeeee;
 }
 
+<<<<<<< HEAD
 @media (min-width: 500x) {
 	body {
 		background-color: purple;
@@ -12,3 +13,11 @@ div {
 	border: 3px solid black;
 	display: flex;
 }
+=======
+@media (max-width: 500px) {
+	body{
+		background: black;
+		color: white
+	}
+}
+>>>>>>> cb4f6501b743535cd95d227d9c7522965e04cda1
