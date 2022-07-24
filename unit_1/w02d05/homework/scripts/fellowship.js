@@ -275,19 +275,19 @@ $(() => {
 	// This code is loading all of the event listeners for the buttons in your application.
 	// =====================================
 
-	// $(() => {
-	// 	$("#1").on("click", makeMiddleEarth);
-	// 	$("#2").on("click", makeHobbits);
-	// 	$("#3").on("click", keepItSecretKeepItSafe);
-	// 	$("#4").on("click", makeBaddies);
-	// 	$("#5").on("click", makeBuddies);
-	// 	$("#6").on("click", leaveTheShire);
-	// 	$("#7").on("click", beautifulStranger);
-	// 	$("#8").on("click", forgeTheFellowShip);
-	// 	$("#9").on("click", theBalrog);
-	// 	$("#10").on("click", hornOfGondor);
-	//	$("#11").on("click", itsDangerousToGoAlone);
-	//	$("#12").on("click", weWantsIt);
-	//	$("#13").on("click", thereAndBackAgain);
-	//});
+	$(() => {
+		$("#1").on("click", makeMiddleEarth);
+		$("#2").on("click", makeHobbits);
+		$("#3").on("click", keepItSecretKeepItSafe);
+		$("#4").on("click", makeBaddies);
+		$("#5").on("click", makeBuddies);
+		$("#6").on("click", leaveTheShire);
+		$("#7").on("click", beautifulStranger);
+		$("#8").on("click", forgeTheFellowShip);
+		$("#9").on("click", theBalrog);
+		$("#10").on("click", hornOfGondor);
+		$("#11").on("click", itsDangerousToGoAlone);
+		$("#12").on("click", weWantsIt);
+		$("#13").on("click", thereAndBackAgain);
+	});
 });
