@@ -111,8 +111,8 @@ $(() => {
 	// ============
 	const $ul2 = $("<ul>");
 
-	for (let i = 0; i < hobbits.length; i++) {
-		const $li = $("<li>").addClass("baddy").text(buddies[i]);
+	for (let i = 0; i < baddies.length; i++) {
+		const $li = $("<li>").addClass("baddy").text(baddies[i]);
 		$ul2.append($li);
 	}
 
@@ -129,15 +129,22 @@ $(() => {
 	// ============
 	// Chapter 5
 	// ============
-	
+
+	const $aside = $("<aside>");
+
 	//   // 1. create an aside tag and append it to middle-earth below mordor
-
+	$aside.insertAfter("#Mordor");
 	//   // 2. display an unordered list of buddies in the aside
+	const $ul3 = $("<ul>");
 
+	for (let i = 0; i < buddies.length; i++) {
+		const $li = $("<li>").addClass("buddy").text(buddies[i]);
+		$ul3.append($li);
+	}
 	//   // 3. give each of the buddies a class of "buddy"
 
 	//   // 4. don't forget to append them to the aside
-
+	$aside.append($ul3);
 	// // COMMIT YOUR WORK
 	// // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
@@ -147,6 +154,8 @@ $(() => {
 
 	//   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 	//       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+	let element = $(".hobbits").detach();
+	$("#Rivendell").append(element);
 
 	// // COMMIT YOUR WORK
 	// // The commit message should read: "Chapter 6 complete - Left the Shire"
