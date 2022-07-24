@@ -164,6 +164,7 @@ $(() => {
 	// // Chapter 7
 	// // ============
 
+	$(".buddy:eq(3)").text("Aragorn");
 	//   // 1. change the buddy 'Strider' text node to "Aragorn"
 	//      // hint: You can get a list of elements by tag name, such as 'aside'
 
