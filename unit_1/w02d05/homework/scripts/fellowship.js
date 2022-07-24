@@ -229,11 +229,13 @@ $(() => {
 	// ============
 	// Chapter 11
 	// ============
-
+	let elem = $(".hobbits:eq(0), .hobbits:eq(1)").detach();
+	$("#Mordor").append(elem);
 	// 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
 	// 2. add a div wiid of 'mount-doom' to Mordor
-
+	const $mountDoom = $("<div>");
+	$("#Mordor").append($mountDoom);
 	// COMMIT YOUR WORK
 	// The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
@@ -281,8 +283,8 @@ $(() => {
 	// 	$("#8").on("click", forgeTheFellowShip);
 	// 	$("#9").on("click", theBalrog);
 	// 	$("#10").on("click", hornOfGondor);
-	// 	$("#11").on("click", itsDangerousToGoAlone);
-	// 	$("#12").on("click", weWantsIt);
-	// 	$("#13").on("click", thereAndBackAgain);
-	// });
+	//	$("#11").on("click", itsDangerousToGoAlone);
+	//	$("#12").on("click", weWantsIt);
+	//	$("#13").on("click", thereAndBackAgain);
+	//});
 });
