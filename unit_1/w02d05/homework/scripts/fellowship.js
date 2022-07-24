@@ -217,8 +217,11 @@ $(() => {
 
 	// 1. create a pop-up alert that the horn of gondor has been blown
 	//when the webpage is loaded
+	//	alert("The horn of gondor has been blown");
 	// 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+	$(".buddy:eq(4)").css("text-decoration", "line-through");
 	// 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+	$(".baddy:eq(2)").remove();
 
 	// COMMIT YOUR WORK
 	// The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
