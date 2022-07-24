@@ -202,7 +202,7 @@ $(() => {
 	// ============
 	// Chapter 9
 	// ============
-
+	$(".buddy:eq(0)").text("Gandalf the White").addClass("the-white");
 	// 1. change the 'Gandalf' text to 'Gandalf the White'
 	// 2. add a class "the-white" to this element
 
