@@ -70,10 +70,14 @@ $(() => {
 
 	const $ul = $("<ul>");
 
-	for (let i = 0; i < hobbits.length; i++) {
-		const $li = $("<li>").addClass("hobbits").text(hobbits[i]);
-		$ul.append($li);
-	}
+	const $hobbits = () => {
+		for (let i = 0; i < hobbits.length; i++) {
+			const $li = $("<li>").addClass("hobbits").text(hobbits[i]);
+			$ul.append($li);
+		}
+	};
+
+	$hobbits();
 
 	$("#The-Shire").append($ul);
 
@@ -111,12 +115,16 @@ $(() => {
 	// ============
 	const $ul2 = $("<ul>");
 
-	for (let i = 0; i < baddies.length; i++) {
-		const $li = $("<li>").addClass("baddy").text(baddies[i]);
-		$ul2.append($li);
-	}
+	const $baddy = () => {
+		for (let i = 0; i < baddies.length; i++) {
+			const $li = $("<li>").addClass("baddy").text(baddies[i]);
+			$ul2.append($li);
+		}
+	};
+	$baddy();
 
 	$("#Mordor").append($ul2);
+
 	// 1. display an unordered list of baddies in Mordor
 
 	// 3. remember to append the ul to Mordor
@@ -174,14 +182,19 @@ $(() => {
 	// // ============
 	// // Chapter 8
 	// // ============
+	const $newDiv = $("<div>").attr("id", "the-fellowship");
 
 	//   // 1. create a new div with an id 'the-fellowship'
-
+	const $h1 = $("<h1>").text("The Fellowship");
 	// 2. add an h1 with the text 'The Fellowship' to this new div
-
+	$newDiv.append($h1);
 	// 3. append the fellowship to middle-earth
+	$middleEarth.append($newDiv);
 
 	// 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+	$newDiv.append($ul2);
+	$hobbits();
+	$newDiv.append($ul);
 
 	// COMMIT YOUR WORK
 	// The commit message should read: "Chapter 8 complete - The Fellowship is created"
