@@ -95,7 +95,6 @@ $(() => {
 
 	$(".hobbits:eq(0)").append($theRing);
 
-	
 	// 1. create an empty div with an id of 'the-ring'
 
 	// 2. add the ring as a child of Frodo
@@ -110,7 +109,14 @@ $(() => {
 	// ============
 	// Chapter 4
 	// ============
+	const $ul2 = $("<ul>");
 
+	for (let i = 0; i < hobbits.length; i++) {
+		const $li = $("<li>").addClass("baddy").text(buddies[i]);
+		$ul2.append($li);
+	}
+
+	$("#Mordor").append($ul2);
 	// 1. display an unordered list of baddies in Mordor
 
 	// 3. remember to append the ul to Mordor
