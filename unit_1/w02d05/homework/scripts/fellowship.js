@@ -91,7 +91,11 @@ $(() => {
 	// ============
 	// Chapter 3
 	// ============
+	const $theRing = $("<div>").attr("id", "the-ring").text("TEST TEST");
 
+	$(".hobbits:eq(0)").append($theRing);
+
+	
 	// 1. create an empty div with an id of 'the-ring'
 
 	// 2. add the ring as a child of Frodo
