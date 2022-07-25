@@ -55,5 +55,5 @@ body {
 }
 
 .carousel-images img:first-of-type {
-
+	display: block;
 }
