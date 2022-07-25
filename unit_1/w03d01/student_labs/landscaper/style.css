@@ -1,6 +1,6 @@
-/* div {
+div {
 	border: 4px solid black;
-} */
+}
 
 body {
 	background: radial-gradient(
@@ -113,4 +113,8 @@ h3.prompt:hover {
 
 .hide {
 	display: none;
+}
+
+div.tools {
+	padding-right: 100px;
 }

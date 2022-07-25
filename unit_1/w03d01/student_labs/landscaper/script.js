@@ -31,7 +31,7 @@
 
 const user = {
 	username: "",
-	wallet: 5,
+	wallet: 1005,
 	daysPlayed: 0,
 	tools: 0,
 };
@@ -60,7 +60,7 @@ let tool = [
 		name: "Hiring Team of Starving Students",
 		price: 500,
 		earn: 250,
-		owned: 0,
+		owned: 1,
 	},
 ];
 const $toolRender = () => {
@@ -74,6 +74,10 @@ const $toolRender = () => {
 	}
 };
 $toolRender();
+const clearDiv = () => {
+	$(".maingame ").addClass("hide");
+	const $maingame = $("<div>").addClass("maingame").appendTo(".game");
+};
 // const purchaseScissors = () => {
 // 	if (tool[1].owned === 1) {
 // 		console.log("You already have this tool");
@@ -143,51 +147,33 @@ $toolRender();
 // 	dailyChoice();
 // };
 
-// const checkWallet = () => {
-// 	if (user.wallet >= 1000 && tool[4].owned === 1) {
-// 		console.log(
-// 			"********************************************************************************************************************************"
-// 		);
-// 		console.log(
-// 			`Congratulations you have completed all the required tasks to win this game!`
-// 		);
-// 		console.log(
-// 			"********************************************************************************************************************************"
-// 		);
-// 		let userSecondChance = prompt(`Do you want to start the game again?`);
-// 		userSecondChance = userSecondChance.toUpperCase();
-// 		if (userSecondChance === "YES") {
-// 			initializeGame();
-// 		} else {
-// 			console.log("have a nice day!");
-// 		}
-// 	} else if (user.wallet < 0) {
-// 		console.log("You are dead from starving");
-// 		console.log("");
-// 		console.log("");
-// 		console.log("");
-// 		console.log("");
-// 		let userSecondChance = prompt(
-// 			`After being homeless for 5 years you have collected enough plastic to start your landscaper business again, would you like to try again ?`
-// 		);
-// 		userSecondChance = userSecondChance.toUpperCase();
-// 		if (userSecondChance === "YES") {
-// 			initializeGame();
-// 		}
-// 	} else if (user.wallet >= 5) {
-// 		let toolPurchase = prompt(`Would you like to purchase another tool?   `);
-// 		console.log("");
-// 		toolPurchase = toolPurchase.toUpperCase();
+const checkWallet = () => {
+	clearDiv();
+	if (user.wallet >= 1000 && tool[4].owned === 1) {
+		const $userWin = $("<div>").addClass("welcome").appendTo(".maingame");
+	// } else if (user.wallet < 0) {
+	// 	console.log("You are dead from starving");
+	// 	let userSecondChance = prompt(
+	// 		`After being homeless for 5 years you have collected enough plastic to start your landscaper business again, would you like to try again ?`
+	// 	);
+	// 	userSecondChance = userSecondChance.toUpperCase();
+	// 	if (userSecondChance === "YES") {
+	// 		initializeGame();
+	// 	}
+	// } else if (user.wallet >= 5) {
+	// 	let toolPurchase = prompt(`Would you like to purchase another tool?   `);
 
-// 		if (toolPurchase === "YES") {
-// 			purchaseTool();
-// 		} else {
-// 			dailyChoice();
-// 		}
-// 	} else {
-// 		dailyChoice();
-// 	}
-// };
+	// 	toolPurchase = toolPurchase.toUpperCase();
+
+	// 	if (toolPurchase === "YES") {
+	// 		purchaseTool();
+	// 	} else {
+	// 		dailyChoice();
+	// 	}
+	} else {
+		dailyChoice();
+	}
+};
 // const dailyChoice = () => {
 // 	let dailyChoice = prompt(
 // 		"Do you want to go sleep and work tomorrow or do you want to quit?"
@@ -212,9 +198,7 @@ $toolRender();
 // };
 
 const dailyEarning = () => {
-	$(".maingame ").addClass("hide");
-	const $maingame = $("<div>").addClass("maingame").appendTo(".game");
-
+	clearDiv();
 	for (let a = 0; a < tool.length; a++) {
 		if (tool[a].owned === 1) {
 			user.wallet += tool[a].earn;
@@ -224,11 +208,6 @@ const dailyEarning = () => {
 					`Using just your ${tool[a].name}, you can spend the day cutting lawns and make $ ${tool[a].earn}. You can do this as much as you want. `
 				)
 				.appendTo(".maingame");
-
-			console.log("");
-			console.log(
-				`Your wallet now has: ${user.wallet} which you earned using ${tool[a].name}`
-			);
 		}
 	}
 	$("#wallet h3").text(`Your wallet  has $${user.wallet}`.toUpperCase());
@@ -238,12 +217,13 @@ const dailyEarning = () => {
 const startGame = () => {
 	user.daysPlayed += 1;
 	dailyEarning();
-	// checkWallet();
 };
 
 const dontStartGame = () => {
 	alert("Please stay");
 };
+
+// Creating the startGame div with the YES/No prompt
 const landscaper = () => {
 	const $welcome = $("<div>").addClass("welcome");
 	const $welcomeText = $("<h2>").text("Welcome to Landscaper".toUpperCase());
@@ -268,10 +248,12 @@ const landscaper = () => {
 		.text("no".toUpperCase())
 		.appendTo($prompt);
 };
-
+// loading game after page is loaded
 $(() => {
 	landscaper();
 	$("#yes").on("click", startGame);
 
 	$("#no").on("click", dontStartGame);
+
+	$("#checkwallet").on("click", checkWallet);
 });
