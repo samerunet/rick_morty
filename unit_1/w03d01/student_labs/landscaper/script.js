@@ -1,42 +1,11 @@
-// const prompt = require("prompt-sync")();
-
-/* 
- Create functions for all tools 
- Set a loop to change condition depending on income 
- Add a reset function
- if the condition is met we can prompt with question to sell tool or use all tools  
- A user can have a limit of 2 tools at given time 
-*/
-
-// if you want the player to win and you have limited time please update user.wallet value
-
-// restart game available
-
-// added option that user will spend money every day on random restaurant
-
-// added options to purchase different tools
-
-//
-
-// const initializeGame = () => {
-
-// const $username = $("<form>");
-// const $usernameButton = $("<button>");
-
-// $username.append("<input>");
-
-// $(".maingame").append($username);
-// ("Please enter your username");
-// console.log($username);
-
 const user = {
 	username: "",
-	wallet: 1005,
+	wallet: 5,
 	daysPlayed: 0,
 	tools: 0,
 };
 $("#daysplayed h3").text(`You have played ${user.daysPlayed} days`);
-// user.wallet = user.wallet.toFixed(2);
+
 const restaurant = [
 	{ name: "KFC", amount: 0.5 },
 	{ name: "Taco Bell", amount: 0.8 },
@@ -47,7 +16,7 @@ const restaurant = [
 let tool = [
 	{ name: "Teeth", price: 1, earn: 1, owned: 1 },
 
-	{ name: "Rusty Scissors", price: 5, earn: 5, owned: 1 },
+	{ name: "Rusty Scissors", price: 5, earn: 5, owned: 0 },
 
 	{ name: "Old-timey Push Lawnmower", price: 25, earn: 50, owned: 0 },
 	{
@@ -60,10 +29,17 @@ let tool = [
 		name: "Hiring Team of Starving Students",
 		price: 500,
 		earn: 250,
-		owned: 1,
+		owned: 0,
 	},
 ];
 const $toolRender = () => {
+	$(".tools").addClass("hide");
+	const $maingame = $("<div>").addClass("tools").appendTo(".game");
+
+	const $h1 = $("<h1>")
+		.text("YOU OWE THIS TOOLS:")
+		.appendTo(".tools")
+		.addClass("toolsTitle");
 	for (let i = 0; i < tool.length; i++) {
 		if (tool[i].owned === 1) {
 			const $toolsowned = $("<div>").addClass("toolsowned");
@@ -78,127 +54,235 @@ const clearDiv = () => {
 	$(".maingame ").addClass("hide");
 	const $maingame = $("<div>").addClass("maingame").appendTo(".game");
 };
-// const purchaseScissors = () => {
-// 	if (tool[1].owned === 1) {
-// 		console.log("You already have this tool");
-// 	} else {
-// 		user.wallet = (user.wallet - tool[1].price).toFixed(2);
-// 		tool[1].owned = 1;
-// 		console.log(
-// 			` Congratulations you have successfully purchased ${tool[1].name} your wallet now has ${user.wallet}`
-// 		);
-// 	}
-// };
 
-// const purchaseLawnmower = () => {
-// 	if (tool[2].owned === 1) {
-// 		console.log("You already have this tool");
-// 	} else {
-// 		user.wallet = (user.wallet - tool[2].price).toFixed(2);
-// 		tool[2].owned = 1;
-// 		console.log(
-// 			` Congratulations you have successfully purchased ${tool[2].name} your wallet now has ${user.wallet}`
-// 		);
-// 	}
-// };
+const purchaseScissors = () => {
+	clearDiv();
+	if (tool[1].owned === 1) {
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(`You already have ${tool[1].name}`)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	} else {
+		user.wallet = (user.wallet - tool[1].price).toFixed(2);
+		tool[1].owned = 1;
 
-// const purchasePoweredLawnmower = () => {
-// 	if (tool[3].owned === 1) {
-// 		console.log("You already have this tool");
-// 	} else {
-// 		user.wallet -= tool[3].price;
-// 		tool[3].owned = 1;
-// 		console.log(
-// 			` Congratulations you have successfully purchased ${tool[3].name} your wallet now has ${user.wallet}`
-// 		);
-// 	}
-// };
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(
+				` Congratulations you have successfully purchased ${tool[1].name} your wallet now has ${user.wallet}`
+			)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	}
+};
 
-// const hireStudents = () => {
-// 	if (tool[4].owned === 1) {
-// 		console.log("You already have this tool");
-// 	} else {
-// 		user.wallet -= tool[4].price;
-// 		tool[4].owned = 1;
-// 		console.log(
-// 			` Congratulations you have successfully  ${tool[4].name} your wallet now has ${user.wallet}`
-// 		);
-// 	}
-// };
+const purchaseLawnmower = () => {
+	clearDiv();
+	if (tool[2].owned === 1) {
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(`You already have ${tool[1].name}`)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	} else {
+		user.wallet = (user.wallet - tool[2].price).toFixed(2);
+		tool[2].owned = 1;
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(
+				` Congratulations you have successfully purchased ${tool[1].name} your wallet now has ${user.wallet}`
+			)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	}
+};
 
-// const purchaseTool = () => {
-// 	console.log(" ");
-// 	let purchaseChoice = prompt(
-// 		`Would you like to purchase  Scissors, Lawnmower, Powered Lawnmower, or hire Students?`
-// 	);
-// 	purchaseChoice = purchaseChoice.toUpperCase();
-// 	if (purchaseChoice === "SCISSORS") {
-// 		purchaseScissors();
-// 	}
-// 	if (purchaseChoice === "LAWNMOWER") {
-// 		purchaseLawnmower();
-// 	}
-// 	if (purchaseChoice === "POWERED LAWNMOWER") {
-// 		purchasePoweredLawnmower();
-// 	}
-// 	if (purchaseChoice === "HIRE STUDENTS") {
-// 		hireStudents();
-// 	}
-// 	dailyChoice();
-// };
+const purchasePoweredLawnmower = () => {
+	clearDiv();
+	if (tool[3].owned === 1) {
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(`You already have ${tool[1].name}`)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	} else {
+		user.wallet -= tool[3].price;
+		tool[3].owned = 1;
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(
+				` Congratulations you have successfully purchased ${tool[1].name} your wallet now has ${user.wallet}`
+			)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	}
+};
+
+const hireStudents = () => {
+	clearDiv();
+	if (tool[4].owned === 1) {
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(`You already have ${tool[1].name}`)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	} else {
+		user.wallet -= tool[4].price;
+		tool[4].owned = 1;
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(
+				` Congratulations you have successfully purchased ${tool[1].name} your wallet now has ${user.wallet}`
+			)
+			.appendTo(".maingame");
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+		const $no = $("<h3>")
+			.attr("id", "return")
+			.addClass("prompt")
+			.text("return back to game".toUpperCase())
+			.appendTo($prompt)
+			.on("click", dailyEarning);
+	}
+};
 
 const checkWallet = () => {
 	clearDiv();
+
+	//	const buyScissors = $("<>");
+
 	if (user.wallet >= 1000 && tool[4].owned === 1) {
-		const $userWin = $("<div>").addClass("welcome").appendTo(".maingame");
-	// } else if (user.wallet < 0) {
-	// 	console.log("You are dead from starving");
-	// 	let userSecondChance = prompt(
-	// 		`After being homeless for 5 years you have collected enough plastic to start your landscaper business again, would you like to try again ?`
-	// 	);
-	// 	userSecondChance = userSecondChance.toUpperCase();
-	// 	if (userSecondChance === "YES") {
-	// 		initializeGame();
-	// 	}
-	// } else if (user.wallet >= 5) {
-	// 	let toolPurchase = prompt(`Would you like to purchase another tool?   `);
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(`You won the game`)
+			.appendTo(".maingame");
+	} else if (user.wallet < 0) {
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(
+				`After being homeless for 5 years you have collected enough plastic to start your landscaper business again, would you like to try again ?`
+			)
+			.appendTo(".maingame");
 
-	// 	toolPurchase = toolPurchase.toUpperCase();
+		const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
 
-	// 	if (toolPurchase === "YES") {
-	// 		purchaseTool();
-	// 	} else {
-	// 		dailyChoice();
-	// 	}
-	} else {
-		dailyChoice();
+		const $yes = $("<h3>")
+			.attr("id", "yes")
+			.addClass("prompt")
+			.text("Yes".toUpperCase())
+			.appendTo($prompt);
+
+		const $no = $("<h3>")
+			.attr("id", "no")
+			.addClass("prompt")
+			.text("no".toUpperCase())
+			.appendTo($prompt);
+		// create on click for yes/no
+		// 		initializeGame();
+	} else if (user.wallet >= 5) {
+		const $userProgress = $("<div>")
+			.addClass("welcome")
+			.text(`Would you like to purchase tools?`)
+			.appendTo(".maingame");
+
+		const $prompt = $("<div>").addClass("tooloption").appendTo(".maingame");
+		const $scissors = $("<h3>")
+			.attr("id", "scissors")
+			.addClass("prompt")
+			.text("       RUSTY SCISSORS     ".toUpperCase())
+			.appendTo($prompt)
+			.on("click", purchaseScissors);
+
+		const $purchaseLawnmower = $("<h3>")
+			.attr("id", "lawnmower")
+			.addClass("prompt")
+			.text("Old-timey Push Lawnmower".toUpperCase())
+			.appendTo($prompt)
+			.on("click", purchaseLawnmower);
+
+		const $purchasePoweredLawnmower = $("<h3>")
+			.attr("id", "poweredlawnmower")
+			.addClass("prompt")
+			.text("Fancy Battery-powered Lawnmower".toUpperCase())
+			.appendTo($prompt)
+			.on("click", purchasePoweredLawnmower);
+
+		const $students = $("<h3>")
+			.attr("id", "students")
+			.addClass("prompt")
+			.text("Hiring Team of Starving Students".toUpperCase())
+			.appendTo($prompt)
+			.on("click", hireStudents);
 	}
 };
-// const dailyChoice = () => {
-// 	let dailyChoice = prompt(
-// 		"Do you want to go sleep and work tomorrow or do you want to quit?"
-// 	);
-// 	dailyChoice = dailyChoice.toUpperCase();
 
-// 	if (dailyChoice === "SLEEP" || dailyChoice === "YES") {
-// 		console.log("");
-// 		console.log(`We hope you have a good night of rest`);
-// 		console.log("");
+const dailyChoice = () => {
+	clearDiv();
+	let dinner = restaurant[Math.floor(Math.random() * restaurant.length)];
+	user.wallet = user.wallet - dinner.amount;
+	const $night = $("<div>")
+		.addClass("welcome")
+		.text(
+			`You were hungry and had to spend ${dinner.amount} at ${dinner.name} and your wallet has $${user.wallet}`
+		)
+		.appendTo(".maingame");
+	const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
 
-// 		let dinner = restaurant[Math.floor(Math.random() * restaurant.length)];
-
-// 		console.log(dinner);
-
-// 		user.wallet = user.wallet - dinner.amount;
-// 		console.log(
-// 			`You were hungry and had to spend ${dinner.amount} at ${dinner.name} and your wallet has $${user.wallet}`
-// 		);
-// 		landscaper();
-// 	}
-// };
+	const $yes = $("<h3>")
+		.attr("id", "WakeUp")
+		.addClass("prompt")
+		.text("WakeUP".toUpperCase())
+		.appendTo($prompt)
+		.on("click", dailyEarning);
+	$("#daysplayed h3").text(`You have played ${user.daysPlayed} days`);
+	// landscaper();
+};
 
 const dailyEarning = () => {
 	clearDiv();
+	$toolRender();
 	for (let a = 0; a < tool.length; a++) {
 		if (tool[a].owned === 1) {
 			user.wallet += tool[a].earn;
@@ -210,15 +294,42 @@ const dailyEarning = () => {
 				.appendTo(".maingame");
 		}
 	}
+	const $userProgress = $("<div>")
+		.addClass("welcome")
+		.text("Do you want to go sleep and work tomorrow or do you want to quit?")
+		.appendTo(".maingame");
+	const $prompt = $("<div>").addClass("questions").appendTo(".maingame");
+
+	const $yes = $("<h3>")
+		.attr("id", "sleep")
+		.addClass("prompt")
+		.text("sleep".toUpperCase())
+		.appendTo($prompt)
+		.on("click", dailyChoice);
+
+	const $no = $("<h3>")
+		.attr("id", "quit")
+		.addClass("prompt")
+		.text("quit".toUpperCase())
+		.appendTo($prompt)
+		.on("click", startOver);
+	user.wallet = user.wallet.toFixed(2);
+	user.daysPlayed += 1;
 	$("#wallet h3").text(`Your wallet  has $${user.wallet}`.toUpperCase());
 
 	$("#daysplayed h3").text(`You have played ${user.daysPlayed} days`);
+	$("#sleep").on("click", dailyChoice);
+};
+const startOver = () => {
+	clearDiv();
+	landscaper();
 };
 const startGame = () => {
-	user.daysPlayed += 1;
 	dailyEarning();
 };
-
+const buyScissors = () => {
+	purchaseScissors();
+};
 const dontStartGame = () => {
 	alert("Please stay");
 };
@@ -251,9 +362,15 @@ const landscaper = () => {
 // loading game after page is loaded
 $(() => {
 	landscaper();
+	//	$("#yes").on("click", purchaseLawnmower);
 	$("#yes").on("click", startGame);
 
 	$("#no").on("click", dontStartGame);
 
 	$("#checkwallet").on("click", checkWallet);
+
+	$("#scissors").on("click", purchaseScissors);
+	//$("#lawnmower").on("click");
+	//	$("#poweredlawnmower").on("click");
+	//$("#students").on("click");
 });
