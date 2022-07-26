@@ -118,7 +118,7 @@ _How to prepare for your project approval_
 
 Your project is due on Tuesday, Aug 2nd at 9:00 am EST. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1pTTnqPRsj332U1oaR2sG87ummdk6seMI/edit?usp=sharing&ouid=113492189120314316778&rtpof=true&sd=true). Note that this will be the order you present your projects!
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1EkSvSHj9ARZ-D_oxiVKD5hziUoXYucSHgzcxARXXK08/edit#gid=890219392). Note that this will be the order you present your projects!
 
 ## Where to go for help during project week
 
