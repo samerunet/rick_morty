@@ -97,7 +97,7 @@ You will be sharing your app and your code. Be prepared to answer questions from
 
 _An instructor will contact you to setup a meeting time to approve your project._
 
-**Tuesday Apr 26th (Today!) by EOD - Mandatory**<br>
+**Tuesday Jul 26th (Today!) by EOD - Mandatory**<br>
 
 You will meet with an instructor for a few minutes to get your app idea approved.
 
@@ -116,7 +116,7 @@ _How to prepare for your project approval_
 
 ## How to Submit Your Project
 
-Your project is due on Tuesday, May 3rd at 9:00 am EST. You will present your project and show your code to classmates and instructors.
+Your project is due on Tuesday, Aug 2nd at 9:00 am EST. You will present your project and show your code to classmates and instructors.
 
 :heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1pTTnqPRsj332U1oaR2sG87ummdk6seMI/edit?usp=sharing&ouid=113492189120314316778&rtpof=true&sd=true). Note that this will be the order you present your projects!
 
