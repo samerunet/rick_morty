@@ -12,7 +12,7 @@ There are **daily attendance checks on weekdays at 9:00AM EST and 2:00PM EST**. 
 
 - **Tuesday Aug 2nd**: Project presentation day! You're required to be in the class zoom starting at 9:00 AM Eastern
   - NOTE: You should have your project finished before 9:00 AM so that you can give your fellow classmates full attention during their presentation
-- **Outcomes**: The day and time for the week 4 outcomes meeting is normal as usual.
+- **Outcomes**: The day and time for the outcomes meeting is normal as usual.
 
 ## Project Details
 
