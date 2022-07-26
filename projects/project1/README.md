@@ -38,7 +38,7 @@ You will be building a portfolio site for yourself.
 	- projects (a place to hold interesting projects that you build)
 	- links (links to your github, linkedin, and other sites you find interesting)
 		- optionally, instead of making this a separate page, you can make these links appear as part of a navigation section that appears on all pages
-1. Use JS/JQuery to create at least three points of interaction for the user (e.g. the user clicks on something and something happens).  Write these from scratch.  Each point should be a different kind of interaction (i.e. don't just create 3 modals).  Don't use 3rd party frameworks/libraries like jQuery UI, bootstrap, etc.  Also, don't use `alert()` or `prompt()`.  Any messaging/input to/from the user should appear in the DOM.
+1. Use JS/JQuery to create at least three points of interaction for the user (e.g. the user clicks on something and something happens).  Write these from scratch.  Each point should be a different kind of interaction (i.e. don't just create 3 modals).  Don't use 3rd party frameworks/libraries like jQuery UI, bootstrap, etc.  Also, don't use `alert()` or `prompt()`.  Any messaging to, or input from, the user should appear in the DOM.
 1. Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc.).
 
 ### &#x1F535; Stretch Goals (Not Mandatory):
