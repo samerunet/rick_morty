@@ -54,10 +54,24 @@ This version of IP address was designed and adopted by 1980
 Now the world is in transition to a longer IPv6
 that uses 128 bites per address
 
-[br]
-
 DNS
 Domain Name System associates names with IP addresses
 
 DNS servers are connected in a distributed hierarchy
 and are divided into zones such as .com .org .net etc.
+
+Packets and routers
+
+    information gets send out usings ip packets. Packets can travel in different directions.
+
+    Large data can be divided into many packets.
+
+    Routers will help packets to travel in different directions.
+
+    Having options for routing paths is fault guaranteed.
+    The more routers we have the more reliably we can route packets.
+
+TCP
+
+    Transmission control protocol that will check if all packets are available and approve it or re requests packets that didn't arrive.
+
