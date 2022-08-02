@@ -12,7 +12,7 @@ There are **daily attendance checks on weekdays at 9:00AM EST and 2:00PM EST**. 
 
 - **Tuesday Aug 2nd**: Project presentation day! You're required to be in the class zoom starting at 9:00 AM Eastern
   - NOTE: You should have your project finished before 9:00 AM so that you can give your fellow classmates full attention during their presentation
-- **Outcomes**: The day and time for the week 4 outcomes meeting is normal as usual.
+- **Outcomes**: The day and time for the outcomes meeting is normal as usual.
 
 ## Project Details
 
@@ -38,7 +38,7 @@ You will be building a portfolio site for yourself.
 	- projects (a place to hold interesting projects that you build)
 	- links (links to your github, linkedin, and other sites you find interesting)
 		- optionally, instead of making this a separate page, you can make these links appear as part of a navigation section that appears on all pages
-1. Use JS/JQuery to create at least three points of interaction for the user (e.g. the user clicks on something and something happens).  Write these from scratch.  Each point should be a different kind of interaction (i.e. don't just create 3 modals).  Don't use 3rd party frameworks/libraries like jQuery UI, bootstrap, etc.
+1. Use JS/JQuery to create at least three points of interaction for the user (e.g. the user clicks on something and something happens).  Write these from scratch.  Each point should be a different kind of interaction (i.e. don't just create 3 modals).  Don't use 3rd party frameworks/libraries like jQuery UI, bootstrap, etc.  Also, don't use `alert()` or `prompt()`.  Any messaging to, or input from, the user should appear in the DOM.
 1. Implement responsive design (i.e. it should be fully functional on desktop, tablet, mobile, etc.).
 
 ### &#x1F535; Stretch Goals (Not Mandatory):
@@ -97,7 +97,7 @@ You will be sharing your app and your code. Be prepared to answer questions from
 
 _An instructor will contact you to setup a meeting time to approve your project._
 
-**Tuesday Apr 26th (Today!) by EOD - Mandatory**<br>
+**Tuesday Jul 26th (Today!) by EOD - Mandatory**<br>
 
 You will meet with an instructor for a few minutes to get your app idea approved.
 
@@ -116,9 +116,9 @@ _How to prepare for your project approval_
 
 ## How to Submit Your Project
 
-Your project is due on Tuesday, May 3rd at 9:00 am EST. You will present your project and show your code to classmates and instructors.
+Your project is due on Tuesday, Aug 2nd at 9:00 am EST. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1pTTnqPRsj332U1oaR2sG87ummdk6seMI/edit?usp=sharing&ouid=113492189120314316778&rtpof=true&sd=true). Note that this will be the order you present your projects!
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1EkSvSHj9ARZ-D_oxiVKD5hziUoXYucSHgzcxARXXK08/edit#gid=890219392). Note that this will be the order you present your projects!
 
 ## Where to go for help during project week
 
