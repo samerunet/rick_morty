@@ -2,7 +2,7 @@
 
 ## Video Link
 
-[Static Files](https://www.youtube.com/watch?v=EvSFW_EggB0&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=10)
+[Static Files](https://generalassembly.wistia.com/medias/11zc5hk32l)
 
 ## Lesson Objectives
 

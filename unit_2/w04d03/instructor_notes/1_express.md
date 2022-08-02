@@ -2,8 +2,8 @@
 
 ## Video Links
 
-1. [Intro to Express1](https://www.youtube.com/watch?v=vFrOL3KMgfk&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=8)
-1. [Intro to Express2](https://www.youtube.com/watch?v=JiJ8tutYwhA&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=9)
+1. [Intro to Express1](https://generalassembly.wistia.com/medias/kxmye0u6fj)
+1. [Intro to Express2](https://generalassembly.wistia.com/medias/4wi7i9nfxt)
 
 ## Set up Express
 
