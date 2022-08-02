@@ -39,4 +39,4 @@ IP Address and DNS
 
      the IP address has hierarchy and each of the numbers are presented in bits. Traditional Ip addresses are 32 bits with 8 bits for each number.
 
-    ![alt text](ip4.svg)
+![IPv4](ip4.svg)
