@@ -40,3 +40,24 @@ IP Address and DNS
      the IP address has hierarchy and each of the numbers are presented in bits. Traditional Ip addresses are 32 bits with 8 bits for each number.
 
 ![IPv4](ip4.svg)
+
+1st is a COUNTRY/NETWORK
+
+2nd is a REGION/NETWORK
+
+3rd is SUBNETWORK
+
+4th is DEVICE
+
+This version of IP address was designed and adopted by 1980
+
+Now the world is in transition to a longer IPv6
+that uses 128 bites per address
+
+[br]
+
+DNS
+Domain Name System associates names with IP addresses
+
+DNS servers are connected in a distributed hierarchy
+and are divided into zones such as .com .org .net etc.
