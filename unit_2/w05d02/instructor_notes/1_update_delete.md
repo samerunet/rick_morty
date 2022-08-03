@@ -2,7 +2,7 @@
 
 ## Video Link
 
-[CRUD App with Mongoose Delete and Update](https://www.youtube.com/watch?v=MEz3V414TZE&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=16)
+[CRUD App with Mongoose Delete and Update](https://generalassembly.wistia.com/medias/ed20z0grrl)
 
 ## Lesson Objectives
 

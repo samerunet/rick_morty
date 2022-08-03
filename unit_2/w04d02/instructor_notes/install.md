@@ -2,7 +2,7 @@
 
 ## Video Link
 
-[Install Mongo](https://www.youtube.com/watch?v=z0-ZjfHnE0s&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=7)
+[Install Mongo](https://generalassembly.wistia.com/medias/22vewjlrcq)
 
 ## Directions
 

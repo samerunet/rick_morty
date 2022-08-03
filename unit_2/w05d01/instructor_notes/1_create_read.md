@@ -2,7 +2,7 @@
 
 ## Video Link
 
-[CRUD App with Mongoose - Create and Read](https://www.youtube.com/watch?v=E12dD_mw0RE&list=PLdnONIhPScSQqXfMndCJRYWQl-0uApORf&index=11)
+[CRUD App with Mongoose - Create and Read](https://generalassembly.wistia.com/medias/v3jsdfifsy)
 
 ## Lesson Objectives
 
