@@ -57,7 +57,7 @@ Now go to localhost:3000 in the browser.  You should see `Cannot GET /`
 Let's create a route for that path in server.js
 
 ```javascript
-app.get('/', (requet, response)=>{
+app.get('/', (request, response)=>{
 	response.send('welcome to the home page');
 });
 ```
