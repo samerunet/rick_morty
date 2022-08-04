@@ -67,15 +67,13 @@ Here are some commonly desired layout patterns:
 
 ## How It Works 
 
-![flexbox diagram](assets/flexbox-diagram.jpg)
-
 When you declare `display: flex;` in a CSS rule, whatever element is targeted by
 that rule becomes a **flex container**.
 
 That means that all of the flex container's **immediate** children can have flex
 properties applied to them.
 
-The flexbox approach differs from the methods described in the CodePen above in
+The flexbox approach differs from the other css methods in
 that the arrangement of elements is managed by the **parent** container. The
 child of a **flex container** is called a **flex item**. We can change the way
 flex items display by setting item-specific properties that will come later in
