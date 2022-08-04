@@ -378,7 +378,7 @@ There are a handful of things this lesson did not cover. Below is the CSS-Tricks
 #### References
 
 CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
+Flexbox Froggy: https://flexboxfroggy.com/
 Flexplorer: http://bennettfeely.com/flexplorer/
 
 #### Hungry for More (choose any):
