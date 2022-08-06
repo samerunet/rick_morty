@@ -14,9 +14,9 @@ app.get("/history/", (request, response) => {
 	response.render("history.ejs");
 });
 
-// app.get("/PastWork/", (request, response) => {
-// 	response.send("Past work");
-// });
+app.get("/pastwork/", (request, response) => {
+	response.render("pastwork.ejs");
+});
 
 // app.get("/StaffPage/", (request, response) => {
 // 	response.send("Staff Work");
