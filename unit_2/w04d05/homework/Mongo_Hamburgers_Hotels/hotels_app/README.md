@@ -57,7 +57,7 @@ const Hotel = require('./models/hotel.js')
 const hotelSeed = require('./models/seed.js')
 
 // Connect to Mongo
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
+mongoose.connect(mongoURI, () => {
   console.log('The connection with mongod is established')
 })
 
