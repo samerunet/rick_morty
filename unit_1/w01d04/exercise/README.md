@@ -67,6 +67,8 @@ Here are some commonly desired layout patterns:
 
 ## How It Works 
 
+![Flexbox diagram](https://i.imgur.com/7arWGm8.jpg)
+
 When you declare `display: flex;` in a CSS rule, whatever element is targeted by
 that rule becomes a **flex container**.
 
