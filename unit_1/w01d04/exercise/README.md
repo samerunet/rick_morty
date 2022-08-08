@@ -65,6 +65,72 @@ Here are some commonly desired layout patterns:
 - The cards are all the same size
 - The first and last element align with other elements on the page to provide uniformity and overal page layout cohesion. No matter the width, the cards behave in a certain way that is expected and generally desired.
 
+## How It Works 
+
+![Flexbox diagram](https://i.imgur.com/7arWGm8.jpg)
+
+When you declare `display: flex;` in a CSS rule, whatever element is targeted by
+that rule becomes a **flex container**.
+
+That means that all of the flex container's **immediate** children can have flex
+properties applied to them.
+
+The flexbox approach differs from the other css methods in
+that the arrangement of elements is managed by the **parent** container. The
+child of a **flex container** is called a **flex item**. We can change the way
+flex items display by setting item-specific properties that will come later in
+the lesson.
+
+After the `display` property, the most important flexbox property to understand
+is `flex-direction`. It is very important to remember that the `flex-direction`
+orients **flex container's main-axis**. The main axis can be set to run
+vertically or horizontally depending on the value of `flex-direction`. All other
+flex-related properties are defined in terms of the main axis.
+
+First, use `flex-direction` to indicate whether you want the flex items in the
+container to "read" left-to-right (`row`), right-to-left (`row-reverse`),
+top-to-bottom (`column`), or bottom-to-top (`column-reverse`).
+
+| flex-direction | main-axis Direction |
+| -------------- | ------------------- |
+| row (default)  | left-to-right       |
+| column         | top-to-bottom       |
+| row-reverse    | right-to-left       |
+| column-reverse | bottom-to-top       |
+
+The `justify-content` property aligns content relative to the **main axis**.
+Possible values are: `flex-start` (default), `flex-end`, `center`,
+`space-between`, and `space-around`.
+
+> What do you think each does; does the flex-direction affect this?
+
+The `align-items` property is similar to `justify-content` but aligns relative
+to the **cross-axis**. There are similar options here: `flex-start`, `flex-end`,
+`center`, `stretch` (default), and `baseline` (items are aligned by their
+baselines / where the text is).
+
+By default, a **flex container** will arrange its children in a single row or
+column. The `flex-wrap` property can modify this with the values `nowrap`
+(default), `wrap`, and `wrap-reverse`.
+
+When text is wrapping, `align-content` controls how the rows or columns are
+arranged relative to the cross-axis: `flex-start`, `flex-end`, `stretch`
+(default), `center`, `space-between`, and `space-around`.
+
+### In Summary
+
+| Property                                                                                | What's It Do?                           | Examples                  |
+| --------------------------------------------------------------------------------------- | --------------------------------------- | ------------------------- |
+| **display**                                                                             |                                         | `flex`                    |
+| **[flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)**   | Sets the directional flow of flex items | `row`, `column`           |
+| **[justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)** | Align along main axis                   | `center`, `space-between` |
+| **[align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)**         | Align along cross-axis                  | `flex-start`, `center`    |
+
+> That's a lot of CSS properties! Don't worry, you're not expected to memorize
+> all of them. Being a developer is less about knowing everything off the top of
+> your head and more about knowing best practices and where to find more info
+> [Here's a great resource](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+
 ### What We Are Building Today
 We will be building cards that just have a single letter on them. As we build we will learn about some properties of Flexbox and their behavoirs.
 ![Final build](https://i.imgur.com/TFc73Sf.png)
@@ -314,7 +380,7 @@ There are a handful of things this lesson did not cover. Below is the CSS-Tricks
 #### References
 
 CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
+Flexbox Froggy: https://flexboxfroggy.com/
 Flexplorer: http://bennettfeely.com/flexplorer/
 
 #### Hungry for More (choose any):
