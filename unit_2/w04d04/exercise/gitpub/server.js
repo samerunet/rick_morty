@@ -47,14 +47,16 @@ app.get("/pub", (req, res) => {
 	// rendering the index
 	res.render("index.ejs", {
 		drinks: drinks,
-		food: food
+		food: food,
+		tabTitle: 'Home'
 	});
 });
 
 // get drinks show individual
 app.get("/drinks/:id", (req, res) => {
 	res.render("showDrinks.ejs", {
-		drink: drinks[req.params.id]
+		drink: drinks[req.params.id],
+		tabTitle: 'Drinks'
 	});
 });
 
