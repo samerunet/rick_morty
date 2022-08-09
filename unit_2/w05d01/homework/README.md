@@ -198,7 +198,7 @@ Show page should also render properly
 
 <details><summary>Server.js</summary>
 
-![server.js example](https://i.imgur.com/uSYHYzp.png)
+![server.js example](https://i.imgur.com/wsIj6lJ.png)
 
 </details>
 
