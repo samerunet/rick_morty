@@ -152,7 +152,6 @@ Feel free to organize the rest of this page any way you like. Hold off on stylin
 <hr>
 
 #### New
-- configured `body-parser`
 - Add a button in your `index.ejs` that links to a new route that displays `new.ejs`
 - The `new.ejs` should contain
  - html boilerplate
