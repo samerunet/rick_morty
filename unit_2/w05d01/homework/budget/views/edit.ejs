@@ -17,7 +17,26 @@
 	<body>
 		<div class="container">
 			<h1>Update</h1>
-			<form action="/budget/<%=budget.id%>?_m=PUT" method="POST"></form>
+			<form action="/budget/<%=budgets.id%>?_m=PUT" method="POST">
+				date: <input type="text" name="date" placeholder="<%=budgets.date%>" />
+				<br />
+				name: <input type="text" name="name" placeholder="<%=budgets.name%>" />
+				<br />
+				from:
+				<input type="text" name="from" placeholder="<%=budgets.from%>" />
+				<br />
+				amount:
+				<input type="number" name="amount" placeholder="<%=budgets.amount%>" />
+				<br />
+				tags:
+				<input type="text" name="tags" placeholder="<%=budgets.tags%>" />
+				<br />
+
+				<input type="submit" value="SAVE" />
+				<button>
+					<a href="/budget">GO BACK</a>
+				</button>
+			</form>
 		</div>
 	</body>
 </html>

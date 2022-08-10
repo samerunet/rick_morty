@@ -28,7 +28,7 @@ app.get("/budget/new", (req, res) => {
 app.get("/budget/:id/edit", (req, res) => {
 	budgetr.findById(req.params.id, (err, foundBudget) => {
 		res.render("edit.ejs", {
-			fruit: foundBudget,
+			budgets: foundBudget,
 		});
 	});
 });
