@@ -6,7 +6,7 @@ const Fruit = require("./models/fruits.js");
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use(methodOverride("_method"));
+app.use(methodOverride("_m"));
 
 app.get("/fruits/:id/edit", (req, res) => {
 	Fruit.findById(req.params.id, (err, foundFruit) => {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FRUIT PAGE</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>New budget PAGE</h1>
+			<form action="/budget" method="POST">
+				date: <input type="text" name="date" placeholder="Month - Day" /> <br />
+				name: <input type="text" name="name" placeholder="name" /> <br />
+				from:
+				<input type="text" name="from" placeholder="Financial Institution" />
+				<br />
+				amount: <input type="number" name="amount" placeholder="0" /> <br />
+				tags:
+				<input type="text" name="tags" placeholder="source of income/expense" />
+				<br />
+
+				<input type="submit" value="Create new" />
+				<button>
+					<a href="/budget">GO BACK</a>
+				</button>
+			</form>
+		</div>
+	</body>
+</html>

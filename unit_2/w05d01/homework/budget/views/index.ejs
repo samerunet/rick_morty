@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+		/>
+		<title>BUDGETR</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Budgetr</h1>
+			<% let bankAccount = 0 %>
+			<table>
+				<th>Date</th>
+				<th>Name</th>
+				<th>Amount</th>
+				<% for (let i = 0; i < budgets.length; i++) { %> <% bankAccount +=
+				budgets[i].amount %>
+				<tr>
+					<td><%=budgets[i].date%></td>
+					<td>
+						<a href="/budget/<%=budgets[i].id%>">
+							<%=budgets[i].name.toUpperCase()%>
+						</a>
+						<form action="/budget/<%=budgets[i].id%>?_m=DELETE" method="POST">
+							<input type="submit" value="DELETE" />
+						</form>
+						<a href="/budget/<%=budgets[i].id; %>/edit"
+							><button>EDIT</button></a
+						>
+					</td>
+					<td><%=budgets[i].amount%></td>
+				</tr>
+
+				<% } %> <% if(bankAccount >= 1000){ %>
+				<h1 style="background-color: green"><%=bankAccount%></h1>
+				<% } else if (bankAccount<= 0) { %>
+				<h1 style="background-color: red"><%=bankAccount%></h1>
+				<% } else { %>
+				<h1 style="background-color: white"><%=bankAccount%></h1>
+				<% }%>
+			</table>
+			<nav>
+				<a href="/budget/new"><button>Create a New Item</button></a>
+			</nav>
+		</div>
+	</body>
+</html>
