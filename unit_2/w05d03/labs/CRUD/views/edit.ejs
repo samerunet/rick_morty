@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="/edit/<%=costs.id%>?_method=PUT" method="POST">
+			date: <input type="text" name="date" placeholder="<%=costs.date%>" />
+			<br />
+			miles: <input type="text" name="miles" placeholder="<%=costs.miles%>" />
+			<br />
+			gasPriceTotal:
+			<input
+				type="text"
+				name="gasPriceTotal"
+				placeholder="<%=costs.gasPriceTotal%>"
+			/>
+			<br />
+			gasGallons:
+			<input
+				type="number"
+				name="gasGallons"
+				placeholder="<%=costs.gasGallons%>"
+			/>
+			<br />
+			<input type="submit" value="Update" />
+			<button>
+				<a href="/cost">GO BACK</a>
+			</button>
+		</form>
+	</body>
+</html>

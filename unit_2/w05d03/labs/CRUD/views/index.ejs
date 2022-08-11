@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Testing linked ejs file</h1>
+		<nav>
+			<a href="/cost/new"><button>Create a New Item</button></a>
+		</nav>
+		<table>
+			<th>Date</th>
+			<th>Miles</th>
+			<th>Gas Price</th>
+			<th>Gas Gallons</th>
+			<% for(let i = 0; i < costs.length; i++) { %>
+
+			<tr>
+				<td><a href="/cost/<%=costs[i].id%>"> <%=costs[i].date%></a></td>
+				<td><%=costs[i].miles%></td>
+				<td><%=costs[i].gasPriceTotal%></td>
+				<td><%=costs[i].gasGallons%></td>
+				<td>
+					<a href="/cost/<%=costs[i].id%>/edit"> <button>EDIT</button></a>
+				</td>
+				<td>
+					<form action="/cost/<%=costs[i].id%>?_method=DELETE" method="POST">
+						<input type="submit" value="DELETE" />
+					</form>
+				</td>
+			</tr>
+			<% } %>
+		</table>
+	</body>
+</html>
