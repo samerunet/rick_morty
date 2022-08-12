@@ -21,7 +21,27 @@ app.get("/cost", (req, res) => {
 app.get("/cost/new", (req, res) => {
 	res.render("new.ejs");
 });
+// app.put("/cost/:id", (req, res) => {
+// 	dailyExpense.findByIdAndUpdate(
+// 		req.params.id,
+// 		req.body,
+// 		{ new: true },
+// 		(err, updatedModel) => {
+// 			res.redirect("/cost");
+// 		}
+// 	);
+// });
 
+app.put("/cost/:id", (req, res) => {
+	dailyExpense.findByIdAndUpdate(
+		req.params.id,
+		req.body,
+		{ new: true },
+		(err, updatedModel) => {
+			res.redirect("/cost");
+		}
+	);
+});
 app.get("/cost/:id/edit", (req, res) => {
 	dailyExpense.findById(req.params.id, (err, foundExpense) => {
 		res.render("edit.ejs", {
@@ -40,16 +60,6 @@ app.post("/cost", (req, res) => {
 	dailyExpense.create(req.body, (error, createdItem) => {
 		res.redirect("/cost");
 	});
-});
-app.put("/cost/:id", (req, res) => {
-	dailyExpense.findByIdAndUpdate(
-		req.params.id,
-		req.body,
-		{ new: true },
-		(err, updatedModel) => {
-			res.redirect("/cost");
-		}
-	);
 });
 
 app.delete("/cost/:id", (req, res) => {
