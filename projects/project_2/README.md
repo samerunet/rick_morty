@@ -105,7 +105,7 @@ _How to prepare for project approval_
 ## How to Submit Your Project
 Your project is due on Thursday May 19 at 9AM EST. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1EkSvSHj9ARZ-D_oxiVKD5hziUoXYucSHgzcxARXXK08/edit?usp=sharing).
+:heavy_check_mark: Add your project to [this google sheet](https://docs.google.com/spreadsheets/d/1kYnRsLWFpRx_5qZHREbQ9vXmolhg19lWut2rhd8CHxU/edit#gid=890219392).
 
   - _NOTE:_ This will be the order you present in!
 
