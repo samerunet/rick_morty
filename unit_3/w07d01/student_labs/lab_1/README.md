@@ -35,9 +35,9 @@ Now that you've looked into the API, make your Jeopardy Trivia App using it!
 1. As a user, I should be able to see my score on the page
     - By default, the score should be 0
 
-1. As a user, I should be able to click on a button that says "Decrease" that will subtract the question's point value from my score
+1. As a user, I should be able to click on a button that says "Decrease" that will subtract 1 point from my score
 
-1. As a user, I should be able to click on a button that says "Increase" that will add the question's point value to my score
+1. As a user, I should be able to click on a button that says "Increase" that will add 1 point to my score
     - **Stretch**: Instead of just subtracting or adding 1, try using the actual point value of the question instead. You may have to look into [lifting state up, from the React docs](https://reactjs.org/docs/lifting-state-up.html)
 
 1. Finally, add some style and color to your app!
