@@ -1,9 +1,9 @@
 const Location = (props) => {
 	return (
 		<div className='location'>
-			<h2>{props.location.dimension}</h2>
-			<p>{props.location.name}</p>
-			<p>{props.location.type}</p>
+			<h2>Dimension: {props.location.dimension}</h2>
+			<p>Name: {props.location.name}</p>
+			<p>Type: {props.location.type}</p>
 		</div>
 	);
 };
