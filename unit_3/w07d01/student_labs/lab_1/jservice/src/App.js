@@ -6,7 +6,7 @@ import Buttons from "./components/Buttons";
 
 function App() {
 	const [score, setScore] = useState(0);
-	let [characters, setCharacters] = useState([]);
+	let [jeopardy, setCharacters] = useState([]);
 	let [answers, setAnswers] = useState([]);
 
 	let gameUp = () => {
@@ -35,6 +35,9 @@ function App() {
 			<button className='button' onClick={getCharacters}>
 				Get Question
 			</button>
+			{jeopardy.map((jeopardy) => {
+				return <Buttons jeopardy={jeopardy} />;
+			})}
 			<div>Category: </div>
 			<div>
 				<h1>Points: </h1>
@@ -42,9 +45,7 @@ function App() {
 			<div>
 				<h1>Answer: </h1>
 			</div>
-			<div>
-				<h1>{characters.question}</h1>
-			</div>
+			<div></div>
 		</div>
 	);
 }
