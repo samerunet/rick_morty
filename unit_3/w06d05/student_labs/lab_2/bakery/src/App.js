@@ -1,12 +1,12 @@
 import "./App.css";
 import React, { useState } from "react";
 
-
 const user = {
 	username: "",
 	wallet: 0,
 	tools: "no bake pudding",
 };
+
 const tool = [
 	{ name: "no bake pudding", price: 0, earn: 1 },
 	{ name: "easy bake oven", price: 5, earn: 5 },
@@ -18,7 +18,7 @@ const App = () => {
 	const [wallet, setWallet] = useState(user.wallet);
 	let updateWallet = () => {
 		if (user.wallet >= 1000) {
-			alert("Wallet is 1000");
+			alert("Wallet is $1000 and you won the game");
 		} else {
 			switch (user.tools) {
 				case "no bake pudding":
@@ -73,8 +73,8 @@ const App = () => {
 				<div className='maingame'>
 					<div className='welcome'>
 						<h4>
-							Using  your {user.tools}, you can spend the day baking
-							and make {user.tools}. You can do this as much as you want.
+							Using your {user.tools}, you can spend the day baking and make{" "}
+							{user.tools}. You can do this as much as you want.
 						</h4>
 						<button className='button' onClick={updateWallet}>
 							Bake
@@ -106,5 +106,3 @@ const Tools = () => {
 };
 
 export default App;
-
-
