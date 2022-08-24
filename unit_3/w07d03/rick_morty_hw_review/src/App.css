@@ -1,0 +1,42 @@
+/*===========================
+    |---- Everything ----|
+============================*/
+* {
+  box-sizing: border-box;
+}
+
+/*===========================
+  |---- Base Page ----|
+============================*/
+
+.nav-btns {
+  border-radius:5em;
+  box-shadow:.8%;
+}
+
+/*==========================
+  |---- Card Grid ----|
+============================*/
+.card-grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card {
+  margin:.5em;
+  padding:1%;
+  border:.2em solid crimson;
+  display:flex;
+  flex-flow:column wrap;
+  justify-content: center;
+}
+
+/*==========================
+  |---- Ep Card ----|
+============================*/
+.ep {
+  background-image: url("https://i.imgur.com/FjTVNEr.jpg");
+  width: 20vw;
+  height: auto;
+}
