@@ -126,7 +126,9 @@ function App() {
               <button onClick={()=>setDisplayForm(!displayForm)} > SHOW FORM</button>
           
         
-          <>
+              <details>
+            <summary>Edit</summary>
+          
               <form onSubmit={(event) => { updateAnimal(event, animal) }}>
 
                 <label>Name: <input className='form-control' type="text" defaultValue={animal.name} onChange={handleChangeName} /></label><br />
@@ -139,10 +141,7 @@ function App() {
             
               <button onClick={() => { deleteAnimal(animal) }}>DELETE</button>
 
-         
-        
-        
-         </>
+              </details>  
             </>
           )
         })}
