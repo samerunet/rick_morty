@@ -121,23 +121,23 @@ You will be sharing your app and your code. Be prepared to answer questions from
 
 ## Meetings with instructors
 
-**TODAY Friday, May 27**<br>
+**TODAY Friday, Aug 26**<br>
 Your group will talk with your dedicated project instructor for 15 minutes to get your app idea approved. Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas.
 
 ## How to Submit Your Project
 
-Your project is due on Monday, June 6 at 9:00 am ET. Your group will present your project and show your code to classmates and instructors.
+Your project is due on Friday, Sep 2 at 9:00 am ET. Your group will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Add your group project to [this google sheet](https://docs.google.com/spreadsheets/d/1eTWWLldEQWW-D8rWMg1meUvmwJHrbyv13DwGmXwQVaU/edit?usp=sharing). Note that this is the order you will be presenting.
+:heavy_check_mark: Add your group project to [this google sheet](). Note that this is the order you will be presenting.
 
-Please also fill out this [peer feedback form](https://forms.gle/pKgZDiNJ5bE6YdAG7) before project presentation day. Your group mate(s) will **not** be able to see your feedback.
+Please also fill out this [peer feedback form]() before project presentation day. Your group mate(s) will **not** be able to see your feedback.
 
 ## Where to go for help during project week
 
 1. Seek out help online.
 1. Seek out help with your classmates. Make sure you post in the sos channel so the instructors can keep track of who is asking for help!
 1. Seek out help with our class TA.
-1. After all other avenues have been exhausted, seek help from your assigned instructor. Please refer to [How to Ask a Question](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Belcher/wiki/How-To-Ask-A-Question) before you reach out.
+1. After all other avenues have been exhausted, seek help from your assigned instructor. Please refer to [How to Ask a Question](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Zoidberg/wiki/How-To-Ask-A-Question) before you reach out.
 
 **TA Hours** (all normal times EST)
 
