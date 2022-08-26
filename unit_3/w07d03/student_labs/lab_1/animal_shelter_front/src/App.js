@@ -17,6 +17,8 @@ function App() {
 	const [updateImage, setUpdateImage] = useState("");
 	const [updateAdopted, setUpdateAdopted] = useState(false);
 
+
+  
 	const handleNewNameChange = (event) => {
 		setNewName(event.target.value);
 	};
