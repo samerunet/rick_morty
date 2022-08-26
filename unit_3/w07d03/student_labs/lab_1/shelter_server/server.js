@@ -19,6 +19,12 @@ app.get("/animal", (req, res) => {
 	});
 });
 
+app.get("/animal/:id", (req, res) => {
+	schema.findById(req.params.id, (err, findAnimals) => {
+		res.json(findAnimals);
+	});
+});
+
 app.delete("/animal/:id", (req, res) => {
 	schema.findByIdAndRemove(req.params.id, (err, deletedAnimal) => {
 		res.json(deletedAnimal);
