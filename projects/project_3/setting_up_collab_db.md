@@ -14,7 +14,14 @@ Deploying as a group is _slightly_ different than deploying an individual projec
 
 ## Deploying Create React App
 
-Use either:
+This should work:
+
+```
+heroku create
+git push heroku master
+heroku open
+```
+If not, use either:
 
 - https://stackabuse.com/how-to-deploy-a-react-app-to-heroku/
 - https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/
