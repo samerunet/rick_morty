@@ -14,13 +14,10 @@ Deploying as a group is _slightly_ different than deploying an individual projec
 
 ## Deploying Create React App
 
-`cd` into your local Create React App and run:
+Use either:
 
-```
-heroku create -b https://github.com/mars/create-react-app-buildpack.git
-git push heroku master
-heroku open
-```
+- https://stackabuse.com/how-to-deploy-a-react-app-to-heroku/
+- https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/
 
 ## Setting up a shared Atlas database 
 
