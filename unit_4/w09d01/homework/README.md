@@ -9,7 +9,7 @@
 Congratulations everyone on completing unit 3! Now, let's move on to Unit 4! In this next unit, we'll be using a different programming language aside from JavaScript called Python. To get you prepared for upcoming lessons on it, we want you to at least see the new language in action and get some practice with it. Below, we've linked two different tutorials/guides that you can go through to begin familiarizing yourself with the language. It's up to you which tutorial you want to follow, and it's also up to you how much of it you go through, although we do have some suggestions below.
 
 1. [learnpython.org](https://www.learnpython.org/)
-1. [Codeacademy](https://www.codecademy.com/learn/learn-python) - you will have to create an account, but it's free!
+1. [Codeacademy](https://www.codecademy.com/learn/learn-python-3) - you will have to create an account, but it's free!
 
 #### While you go through one of the above tutorials, we suggest particularly paying attention on:
 
