@@ -2,7 +2,11 @@
   "name": "intro_to_mongoose",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "tweet.js",
+=======
+  "main": "app.js",
+>>>>>>> 423335af427f47cfcb1248177bd601598834deea
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
