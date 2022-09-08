@@ -188,13 +188,184 @@
 --    max    
 -- ----------
 --  18000000
+ -- 589 | Peyton Manning          | QB       | 18000000 |      13
 -- (1 row)
 -- 10. The name and position of the first 100 players with the lowest salaries
-
+-- select name, position, salary from players order by salary asc limit 100;
+-- nfl=# select name, position, salary from players order by salary asc limit 100;
+--           name          | position | salary 
+-- ------------------------+----------+--------
+--  Phillip Dillard        |          | 369480
+--  Eric Kettani           | RB       | 390000
+--  Austin Sylvester       | RB       | 390000
+--  Greg Orton             | WR       | 390000
+--  Jerrod Johnson         | QB       | 390000
+--  McLeod Bethel-Thompson | QB       | 390000
+--  Jonathan Crompton      | QB       | 390000
+--  Travon Bellamy         | CB       | 390000
+--  Caleb King             | RB       | 390000
+--  Mike Mohamed           | LB       | 390000
+--  Kyle Nelson            | LS       | 390000
+--  John Malecki           | G        | 390000
+--  Nathan Bussey          | LB       | 390000
+--  Robert James           | LB       | 390000
+--  Markell Carter         | DE       | 390000
+--  Aaron Lavarias         | DT       | 390000
+--  Mark Dell              | WR       | 390000
+--  Ronald Johnson         | WR       | 390000
+--  Doug Worthington       | DT       | 390000
+--  Derrick Jones          | WR       | 390000
+--  Sealver Siliga         | DT       | 390000
+--  Chase Beeler           | C        | 390000
+--  Kenny Wiggins          | T        | 390000
+--  Konrad Reuland         | TE       | 390000
+--  Michael Wilhoite       | LB       | 390000
+--  Garrett Chisolm        | G        | 390000
+--  Juamorris Stewart      | WR       | 390000
+--  Chad Spann             | RB       | 390000
+--  Trevis Turner          | T        | 390000
+--  Justin Medlock         | KR       | 390000
+--  Armon Binns            | WR       | 390000
+--  Derek Hall             | T        | 390000
+--  Shaky Smithson         | WR       | 390000
+--  Armando Allen          | RB       | 390000
+--  DAndre Goodwin         | WR       | 390000
+--  Jeremy Beal            | DE       | 390000
+--  Brett Brackett         | TE       | 390000
+--  Shaun Draughn          | RB       | 390000
+--  John Clay              | RB       | 390000
+--  Tristan Davis          | RB       | 390000
+--  Curtis Holcomb         | CB       | 390000
+--  Jimmy Young            | WR       | 390000
+--  Kevin Cone             | WR       | 390000
+--  Cory Nelms             | CB       | 390000
+--  Ben Guidugli           | TE       | 390000
+--  David Gilreath         | WR       | 390000
+--  Dontavia Bogan         | WR       | 390000
+--  Joe Hastings           | WR       | 390000
+--  Marshall McFadden      | LB       | 390000
+--  Kade Weston            | DT       | 390000
+--  Kyle Hix               | T        | 390000
+--  Mark LeGree            | S        | 390000
+--  Mike Hartline          | QB       | 390000
+--  Jameson Konz           | WR       | 390000
+--  Tyler Beiler           |          | 390000
+--  Mike Blanc             | DT       | 390000
+--  Corbin Bryant          | DT       | 390000
+--  Michael Jasper         | DT       | 390000
+--  Mike Rivera            | LB       | 390000
+--  Pat Devlin             | QB       | 390000
+--  Jerome Messam          | RB       | 390000
+--  Jamie McCoy            | TE       | 390000
+--  Lestar Jean            | WR       | 390000
+--  Malcolm Williams       | CB       | 390000
+--  Ricky Sapp             | DE       | 390000
+--  Rashad Carmichael      | CB       | 390000
+--  Alex Silvestro         | DT       | 390000
+--  Adam Weber             | QB       | 390000
+--  Adam Grant             | T        | 390000
+--  Jammie Kirlew          | DE       | 390000
+--  Joe Reitz              | T        | 405000
+--  Brandon Browner        | CB       | 415000
+--  Jeff Byers             | C        | 415000
+--  Jed Collins            | TE       | 415000
+--  Aaron Berry            | CB       | 415000
+--  Logan Payne            | WR       | 415000
+--  Marcus Sherels         | CB       | 415000
+--  T.J. Conley            | PR       | 415000
+--  Cameron Sheffield      | LB       | 415000
+--  Kyle Bosworth          | LB       | 415000
+--  Garrett McIntyre       | DT       | 415000
+--  John Estes             | C        | 415000
+--  Thomas Austin          | G        | 415000
+--  Emmanuel Stephens      | DT       | 415000
+--  Markus White           | DE       | 440000
+--  Ricardo Matthews       | DT       | 450000
+--  Quinten Lawrence       | WR       | 465000
+--  Bilal Powell           | RB       | 465000
+--  Taylor Boggs           | C        | 465000
+--  Kamar Aiken            | WR       | 465000
+--  Dexter Jackson         | WR       | 465000
+--  Justin Rogers          | CB       | 465000
+--  Johnny White           | RB       | 465000
+--  Eron Riley             | WR       | 465000
+--  Tracy Wilson           | CB       | 465000
+--  DaNorris Searcy        | S        | 465000
+--  Chris White            | LB       | 465000
+--  Sterling Moore         | CB       | 465000
+--  Chris Hairston         | T        | 465000
+--  Andrew Hawkins         | WR       | 465000
+-- (100 rows)
 -- 11. The average salary for a DE in the nfl
-
+--     nfl=# select avg(salary) from players where position = 'DE';
+--          avg          
+-- ----------------------
+--  2161326.377049180328
+-- (1 row)
 -- 12. The names of all the players on the Buffalo Bills
-
+-- nfl=# select * from players where team_id = 1;
+--  id |        name        | position | salary  | team_id 
+-- ----+--------------------+----------+---------+---------
+--   1 | Mario Williams     | DE       | 5900000 |       1
+--   2 | Drayton Florence   | CB       | 4000000 |       1
+--   3 | Shawne Merriman    | LB       | 4000000 |       1
+--   4 | Dwan Edwards       | DT       | 3800000 |       1
+--   5 | Chris Kelsay       | DE       | 3500000 |       1
+--   6 | Kyle Williams      | DT       | 3000000 |       1
+--   7 | Nick Barnett       | LB       | 3000000 |       1
+--   8 | Spencer Johnson    | DT       | 3000000 |       1
+--   9 | Ryan Fitzpatrick   | QB       | 2800000 |       1
+--  10 | Steve Johnson      | WR       | 2500000 |       1
+--  11 | Tyler Thigpen      | QB       | 2500000 |       1
+--  12 | Lee Evans (Buyout) | WR       | 2383334 |       1
+--  13 | Brad Smith         | WR       | 2250000 |       1
+--  14 | Fred Jackson       | RB       | 1955000 |       1
+--  15 | Scott Chandler     | TE       | 1800000 |       1
+--  16 | George Wilson      | S        | 1725000 |       1
+--  17 | Erik Pears         | T        | 1600000 |       1
+--  18 | Leodis McKelvin    | CB       | 1518750 |       1
+--  19 | Brian Moorman      | P        | 1425000 |       1
+--  20 | Terrence McGee     | CB       | 1350000 |       1
+--  21 | Marcell Dareus     | DT       | 1302605 |       1
+--  22 | Chad Rinehart      | G        | 1260000 |       1
+--  23 | Kraig Urbik        | T        | 1260000 |       1
+--  24 | Rian Lindell       | K        | 1000000 |       1
+--  25 | Kirk Morrison      | LB       |  950000 |       1
+--  26 | Corey McIntyre     | RB       |  900000 |       1
+--  27 | C.J. Spiller       | RB       |  852917 |       1
+--  28 | Garrison Sanborn   | LB       |  830000 |       1
+--  29 | Eric Wood          | C        |  800000 |       1
+--  30 | Lionel Dotson      | DE       |  700000 |       1
+--  31 | Ruvell Martin      | WR       |  700000 |       1
+--  32 | Andy Levitre       | G        |  615000 |       1
+--  33 | Jairus Byrd        | CB       |  615000 |       1
+--  34 | Jarron Gilbert     | DE       |  615000 |       1
+--  35 | Kyle Moore         | DT       |  615000 |       1
+--  36 | Aaron Williams     | CB       |  614052 |       1
+--  37 | Donald Jones       | WR       |  540000 |       1
+--  38 | Fendi Onobun       | TE       |  540000 |       1
+--  39 | Kellen Heard       | DT       |  540000 |       1
+--  40 | Mike Caussin       | TE       |  540000 |       1
+--  41 | Naaman Roosevelt   | WR       |  540000 |       1
+--  42 | Alex Carrington    | DE       |  490000 |       1
+--  43 | Arthur Moats       | LB       |  490000 |       1
+--  44 | Colin Brown        | T        |  490000 |       1
+--  45 | Cordaro Howard     | G        |  490000 |       1
+--  46 | Dan Batten         | DE       |  490000 |       1
+--  47 | David Nelson       | WR       |  490000 |       1
+--  48 | Marcus Easley      | WR       |  490000 |       1
+--  49 | Sam Young          | T        |  490000 |       1
+--  50 | Torell Troup       | DT       |  490000 |       1
+--  51 | Kelvin Sheppard    | LB       |  480000 |       1
+--  52 | Lee Smith          | TE       |  479467 |       1
+--  53 | Chris Hairston     | T        |  465000 |       1
+--  54 | Chris White        | LB       |  465000 |       1
+--  55 | DaNorris Searcy    | S        |  465000 |       1
+--  56 | Johnny White       | RB       |  465000 |       1
+--  57 | Justin Rogers      | CB       |  465000 |       1
+--  58 | Kamar Aiken        | WR       |  465000 |       1
+--  59 | Michael Jasper     | DT       |  390000 |       1
+-- (59 rows)
 -- 13. The total salary of all players on the New York Giants
 
 -- 14. The player with the lowest salary on the Green Bay Packers
