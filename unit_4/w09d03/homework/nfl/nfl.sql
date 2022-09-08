@@ -367,5 +367,15 @@
 --  59 | Michael Jasper     | DT       |  390000 |       1
 -- (59 rows)
 -- 13. The total salary of all players on the New York Giants
+-- nfl=# select sum(salary) from players where team_id = 18;
+--    sum    
+-- ----------
+--  74179466
+-- (1 row)
+
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+-- nfl=# select name, salary from players where team_id = 23 order by salary asc;
+--         name         | salary  
+-- ---------------------+---------
+--  Shaky Smithson      |  390000
