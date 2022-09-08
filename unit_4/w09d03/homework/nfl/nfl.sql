@@ -184,7 +184,11 @@
 --  Jason Smith             | T
 -- (22 rows)
 -- 9. The player with the highest salary in the NFL
-
+-- nfl=# select max(salary) from players;
+--    max    
+-- ----------
+--  18000000
+-- (1 row)
 -- 10. The name and position of the first 100 players with the lowest salaries
 
 -- 11. The average salary for a DE in the nfl
