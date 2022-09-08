@@ -151,7 +151,11 @@
 -- (50 rows)
 
 -- 7. The average salary of all NFL players
-
+-- nfl=# select avg(salary) from players;
+--          avg          
+-- ----------------------
+--  1579692.539817232376
+-- (1 row)
 -- 8. The names and positions of players with a salary above 10_000_000
 
 -- 9. The player with the highest salary in the NFL
