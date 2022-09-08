@@ -157,7 +157,32 @@
 --  1579692.539817232376
 -- (1 row)
 -- 8. The names and positions of players with a salary above 10_000_000
-
+-- nfl=# select name, position from players where salary >= 10000000;
+--           name           | position 
+-- -------------------------+----------
+--  Jake Long               | T
+--  Joe Thomas              | T
+--  Dwight Freeney          | DE
+--  Peyton Manning (buyout) | QB
+--  Peyton Manning          | QB
+--  Elvis Dumervil          | DE
+--  Tamba Hali              | DE
+--  Philip Rivers           | QB
+--  Michael Vick            | QB
+--  Nnamdi Asomugha         | CB
+--  Trent Williams          | T
+--  Matthew Stafford        | QB
+--  Cliff Avril             | DE
+--  Jared Allen             | DE
+--  Matt Ryan               | QB
+--  Brent Grimes            | CB
+--  Drew Brees              | QB
+--  Vincent Jackson         | WR
+--  Calais Campbell         | DE
+--  Sam Bradford            | QB
+--  Chris Long              | DE
+--  Jason Smith             | T
+-- (22 rows)
 -- 9. The player with the highest salary in the NFL
 
 -- 10. The name and position of the first 100 players with the lowest salaries
