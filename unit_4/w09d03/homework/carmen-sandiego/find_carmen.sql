@@ -37,10 +37,40 @@ SELECT * FROM COUNTRY LIMIT 1;
 --  VAT         | Italian  | t          |          0
 -- (1 row)
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on to a different country, a country where people speak only the language she was learning. Find out which nearby country speaks nothing but that language.
+--        carmen=# select * from countrylanguage where language = 'Italian';
+--  countrycode | language | isofficial | percentage 
+-- -------------+----------+------------+------------
+--  ITA         | Italian  | t          |       94.1
+--  SMR         | Italian  | t          |        100
+--  VAT         | Italian  | t          |          0
+--  ARG         | Italian  | f          |        1.7
+--  AUS         | Italian  | f          |        2.2
+--  LIE         | Italian  | f          |        2.5
+--  BEL         | Italian  | f          |        2.4
+--  BRA         | Italian  | f          |        0.4
+--  LUX         | Italian  | f          |        4.6
+--  MCO         | Italian  | f          |       16.1
+--  CHE         | Italian  | t          |        7.7
+--  CAN         | Italian  | f          |        1.7
+--  FRA         | Italian  | f          |        0.4
+--  DEU         | Italian  | f          |        0.7
+--  USA         | Italian  | f          |        0.6
+-- (15 rows)
+        -- speak only italian is country with code SMR
+
+-- --select * from country where code = 'SMR';
+--  SMR  | San Marino | Europe    | Southern Europe |          61 |       885 |      27000 |           81.1 | 510.00 |        | San Marino | Republic       |             |    3171 | SM
+-- (1 row)
 
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time. There are only two cities she could be flying to in the country. One is named the same as the country – that would be too obvious. We're following our gut on this one; find out what other city in that country she might be flying to.
+-- carmen=# select * from city where countrycode = 'SMR';
+--   id  |    name    | countrycode |     district      | population 
+-- ------+------------+-------------+-------------------+------------
+--  3170 | Serravalle | SMR         | Serravalle/Dogano |       4802
+--  3171 | San Marino | SMR         | San Marino        |       2294
+-- (2 rows)
 
 
 
