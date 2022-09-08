@@ -91,6 +91,18 @@ SELECT * FROM COUNTRY LIMIT 1;
 
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll follow right behind you!
+-- carmen=# select capital from country where code = 'BRA';
+--  capital 
+-- ---------
+--      211
+-- (1 row)
+
+-- carmen=# select * from city where id = 211;
+--  id  |    name    | countrycode |     district     | population 
+-- -----+------------+-------------+------------------+------------
+--  211 | Bras�lia | BRA         | Distrito Federal |    1969868
+-- (1 row)
+
 
 
 
@@ -108,7 +120,12 @@ SELECT * FROM COUNTRY LIMIT 1;
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
+-- carmen=# select * from city where population = 91084;
+--   id  |     name     | countrycode |  district  | population 
+-- ------+--------------+-------------+------------+------------
+--  4060 | Santa Monica | USA         | California |      91084
+-- (1 row)
 
 
 
--- She's in ____________________________!
+-- She's in ______Santa Monica______________________!
