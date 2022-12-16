@@ -5,7 +5,6 @@ import Character from "./components/Characters";
 import Episode from "./components/Episodes";
 import Location from "./components/Locations";
 import React from "react-bootstrap";
-import { set } from "mongoose";
 
 function App() {
 	let [character, setCharacters] = useState([]);
